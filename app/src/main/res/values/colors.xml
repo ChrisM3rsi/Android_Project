@@ -7,8 +7,7 @@
     <color name="teal_700">#FF018786</color>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
-    <color name="tirkouaz">#21DEDC</color>
-    <color name="mwv">#3A59C5</color>
-    <color name="prasino">#3A9EC5</color>
-    <color name="skouro_prasino">#3AC5A6</color>
+    <color name="mple">#3A59C5</color>
+    <color name="tirkouaz">#3A9EC5</color>
+    <color name="thalassi">#3AC5A6</color>
 </resources>

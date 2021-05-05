@@ -11,27 +11,29 @@
     >
 
 
-    <LinearLayout
+
+
+
+    <FrameLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical"
-       >
-        <androidx.appcompat.widget.Toolbar
-            android:id="@+id/toolbar2"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:background="@color/mwv"
-            android:minHeight="?attr/actionBarSize"
-            android:theme="?attr/actionBarTheme"
-            android:visibility="visible" />
-        <fragment
-            android:id="@+id/fragment2"
-            android:name="com.example.drawer_test.Welcome"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
+        android:background="@color/tirkouaz"
+        android:id="@+id/fragment_container">
 
-            />
-    </LinearLayout>
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/mple"
+        android:minHeight="?attr/actionBarSize"
+        android:theme="?attr/actionBarTheme"
+        android:visibility="visible" />
+
+
+    </FrameLayout>
+
+
 
 
     <com.google.android.material.navigation.NavigationView
@@ -39,7 +41,7 @@
         android:layout_height="match_parent"
         android:id="@+id/navigationView"
         android:layout_gravity="start"
-        android:background="@color/skouro_prasino"
+        android:background="@color/thalassi"
 
         app:menu="@menu/drawer_menu"/>
 

@@ -5,8 +5,9 @@
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context=".Welcome"
-    android:background="@color/white"
+    android:background="@color/tirkouaz"
     android:id="@+id/welcome"
+
     >
 
     <!-- TODO: Update blank fragment layout -->
@@ -46,5 +47,6 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/textView2"
         android:textColor="@color/black"/>
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>
