@@ -20,7 +20,7 @@
         android:layout_width="380dp"
         android:layout_height="40dp"
         android:hint="Κωδικός Αθλήματος:"
-        android:background="@drawable/corners"
+
         tools:layout_editor_absoluteX="15dp"
         tools:layout_editor_absoluteY="115dp" />
 
@@ -29,7 +29,7 @@
         android:layout_width="380dp"
         android:layout_height="40dp"
         android:hint="Όνομα Αθλήματος:"
-        android:background="@drawable/corners"
+
         tools:layout_editor_absoluteX="15dp"
         tools:layout_editor_absoluteY="190dp" />
 
@@ -37,7 +37,7 @@
         android:id="@+id/eidos"
         android:layout_width="380dp"
         android:layout_height="40dp"
-        android:background="@drawable/corners"
+
         android:hint="Είδος Αθλήματος (Ατομικό / Ομαδικό):"
         tools:layout_editor_absoluteX="15dp"
         tools:layout_editor_absoluteY="278dp" />
@@ -47,18 +47,21 @@
         android:layout_width="380dp"
         android:layout_height="40dp"
         android:hint="Φύλλο:"
-        android:background="@drawable/corners"
+
         tools:layout_editor_absoluteX="16dp"
-        tools:layout_editor_absoluteY="349dp" />
+        tools:layout_editor_absoluteY="349dp"
+        />
 
     <Button
         android:layout_width="381dp"
         android:layout_height="43dp"
-        android:background="@drawable/button_color"
+        android:backgroundTint="@color/tirkouaz"
+
         android:text="INSERT"
         android:textSize="16dp"
         android:textStyle="bold"
         tools:layout_editor_absoluteX="15dp"
         tools:layout_editor_absoluteY="543dp" />
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

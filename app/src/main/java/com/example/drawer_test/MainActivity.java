@@ -7,6 +7,7 @@ import androidx.drawerlayout.widget.DrawerLayout;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
+import androidx.room.Room;
 
 import android.annotation.SuppressLint;
 import android.graphics.Color;
@@ -22,11 +23,13 @@ import com.google.android.material.navigation.NavigationView;
 public class MainActivity extends AppCompatActivity {
     DrawerLayout drawerLayout;
     NavigationView navigationView;
+    public static Sports_Db_Local sports_db_local;
     @SuppressLint("ResourceType")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        sports_db_local= Room.databaseBuilder(getApplicationContext(),Sports_Db_Local.class,"Athlimatadb").allowMainThreadQueries().build();
 
         drawerLayout=findViewById(R.id.drawer_layout);
         navigationView=findViewById(R.id.navigationView);
@@ -47,6 +50,8 @@ public class MainActivity extends AppCompatActivity {
                 switch (item.getItemId()) {
                     case R.id.insert:
                         item.setChecked(true);
+                        InsertFragment insertFragment= new InsertFragment();
+                        getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,insertFragment).addToBackStack(null).commit();
                         displayMessage("insert selected");
                         drawerLayout.closeDrawers();
                         return true;

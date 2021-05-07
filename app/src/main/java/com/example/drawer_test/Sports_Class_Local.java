@@ -1,5 +1,6 @@
 package com.example.drawer_test;
 
+import androidx.annotation.NonNull;
 import androidx.room.ColumnInfo;
 import androidx.room.Entity;
 import androidx.room.PrimaryKey;
@@ -7,6 +8,7 @@ import androidx.room.PrimaryKey;
 @Entity(tableName = "Sports")
 public class Sports_Class_Local {
     @PrimaryKey
+
     @ColumnInfo(name= "Sport_id")
     private int id;
 

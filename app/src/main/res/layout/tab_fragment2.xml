@@ -24,7 +24,7 @@
         android:layout_height="40dp"
         android:layout_marginTop="20dp"
         android:layout_marginBottom="20dp"
-        android:background="@drawable/corners"
+
         android:hint="Κωδικός Ομάδας:"
         app:layout_constraintBottom_toTopOf="@+id/onoma_omadas"
         app:layout_constraintEnd_toEndOf="parent"
@@ -37,7 +37,7 @@
         android:id="@+id/onoma_gipedou"
         android:layout_width="380dp"
         android:layout_height="40dp"
-        android:background="@drawable/corners"
+
         android:hint="Όνομα γηπέδου:"
         tools:layout_editor_absoluteX="15dp"
         tools:layout_editor_absoluteY="211dp" />
@@ -46,7 +46,7 @@
         android:id="@+id/onoma_omadas"
         android:layout_width="380dp"
         android:layout_height="40dp"
-        android:background="@drawable/corners"
+
         android:hint="Όνομα:"
         tools:layout_editor_absoluteX="16dp"
         tools:layout_editor_absoluteY="152dp" />
@@ -55,7 +55,7 @@
         android:id="@+id/poli_omadas"
         android:layout_width="380dp"
         android:layout_height="40dp"
-        android:background="@drawable/corners"
+
         android:hint="Πόλη (έδρα):"
         tools:layout_editor_absoluteX="15dp"
         tools:layout_editor_absoluteY="280dp" />
@@ -64,7 +64,6 @@
         android:id="@+id/xwra_omadas"
         android:layout_width="380dp"
         android:layout_height="40dp"
-        android:background="@drawable/corners"
         android:hint="Χώρα:"
         tools:layout_editor_absoluteX="15dp"
         tools:layout_editor_absoluteY="340dp" />
@@ -73,7 +72,7 @@
         android:id="@+id/kwdikos_athlimatos_omadas"
         android:layout_width="380dp"
         android:layout_height="40dp"
-        android:background="@drawable/corners"
+
         android:hint="Κωδικός Αθλήματος:"
         tools:layout_editor_absoluteX="15dp"
         tools:layout_editor_absoluteY="465dp" />
@@ -82,7 +81,7 @@
         android:id="@+id/etos_idrisis"
         android:layout_width="380dp"
         android:layout_height="40dp"
-        android:background="@drawable/corners"
+
         android:hint="Έτος ίδρυσης:"
         tools:layout_editor_absoluteX="15dp"
         tools:layout_editor_absoluteY="403dp" />
@@ -90,7 +89,7 @@
     <Button
         android:layout_width="398dp"
         android:layout_height="43dp"
-        android:background="@drawable/button_color"
+        android:background="@color/tirkouaz"
         android:text="INSERT"
         android:textSize="16dp"
         android:textStyle="bold"

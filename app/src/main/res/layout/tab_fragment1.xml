@@ -22,7 +22,7 @@
         android:layout_width="380dp"
         android:layout_height="40dp"
         android:layout_marginTop="23dp"
-        android:background="@drawable/corners"
+
         android:hint="Κωδικός Αθλητή:"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -32,7 +32,7 @@
         android:id="@+id/onoma_athliti"
         android:layout_width="380dp"
         android:layout_height="40dp"
-        android:background="@drawable/corners"
+
         android:hint="Όνομα:"
         tools:layout_editor_absoluteX="15dp"
         tools:layout_editor_absoluteY="214dp" />
@@ -41,7 +41,7 @@
         android:id="@+id/eponimo_athliti"
         android:layout_width="380dp"
         android:layout_height="40dp"
-        android:background="@drawable/corners"
+
         android:hint="Επώνυμο:"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -51,7 +51,7 @@
         android:id="@+id/poli"
         android:layout_width="380dp"
         android:layout_height="40dp"
-        android:background="@drawable/corners"
+
         android:hint="Πόλη (έδρα):"
         tools:layout_editor_absoluteX="15dp"
         tools:layout_editor_absoluteY="280dp" />
@@ -60,7 +60,7 @@
         android:id="@+id/xwra"
         android:layout_width="380dp"
         android:layout_height="40dp"
-        android:background="@drawable/corners"
+
         android:hint="Χώρα:"
         tools:layout_editor_absoluteX="15dp"
         tools:layout_editor_absoluteY="340dp" />
@@ -69,7 +69,7 @@
         android:id="@+id/kwdikos_athlimatos"
         android:layout_width="380dp"
         android:layout_height="40dp"
-        android:background="@drawable/corners"
+
         android:hint="Κωδικός Αθλήματος:"
         tools:layout_editor_absoluteX="15dp"
         tools:layout_editor_absoluteY="465dp" />
@@ -78,7 +78,7 @@
         android:id="@+id/etos_genisis"
         android:layout_width="380dp"
         android:layout_height="40dp"
-        android:background="@drawable/corners"
+
         android:hint="Έτος γέννησης:"
         tools:layout_editor_absoluteX="15dp"
         tools:layout_editor_absoluteY="403dp" />
@@ -86,7 +86,7 @@
     <Button
         android:layout_width="398dp"
         android:layout_height="43dp"
-        android:background="@drawable/button_color"
+
         android:text="INSERT"
         android:textSize="16dp"
         android:textStyle="bold"
