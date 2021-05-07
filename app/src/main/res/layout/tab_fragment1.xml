@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/textView5"
+        android:layout_width="188dp"
+        android:layout_height="53dp"
+        android:text="ΑΘΛΗΤΗΣ"
+        android:textColor="@color/black"
+        android:textSize="30dp"
+        android:textStyle="italic"
+        tools:layout_editor_absoluteX="125dp"
+        tools:layout_editor_absoluteY="16dp" />
+
+    <EditText
+        android:id="@+id/kwdikos_athliti"
+        android:layout_width="380dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="23dp"
+        android:background="@drawable/corners"
+        android:hint="Κωδικός Αθλητή:"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView5" />
+
+    <EditText
+        android:id="@+id/onoma_athliti"
+        android:layout_width="380dp"
+        android:layout_height="40dp"
+        android:background="@drawable/corners"
+        android:hint="Όνομα:"
+        tools:layout_editor_absoluteX="15dp"
+        tools:layout_editor_absoluteY="214dp" />
+
+    <EditText
+        android:id="@+id/eponimo_athliti"
+        android:layout_width="380dp"
+        android:layout_height="40dp"
+        android:background="@drawable/corners"
+        android:hint="Επώνυμο:"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:layout_editor_absoluteY="154dp" />
+
+    <EditText
+        android:id="@+id/poli"
+        android:layout_width="380dp"
+        android:layout_height="40dp"
+        android:background="@drawable/corners"
+        android:hint="Πόλη (έδρα):"
+        tools:layout_editor_absoluteX="15dp"
+        tools:layout_editor_absoluteY="280dp" />
+
+    <EditText
+        android:id="@+id/xwra"
+        android:layout_width="380dp"
+        android:layout_height="40dp"
+        android:background="@drawable/corners"
+        android:hint="Χώρα:"
+        tools:layout_editor_absoluteX="15dp"
+        tools:layout_editor_absoluteY="340dp" />
+
+    <EditText
+        android:id="@+id/kwdikos_athlimatos"
+        android:layout_width="380dp"
+        android:layout_height="40dp"
+        android:background="@drawable/corners"
+        android:hint="Κωδικός Αθλήματος:"
+        tools:layout_editor_absoluteX="15dp"
+        tools:layout_editor_absoluteY="465dp" />
+
+    <EditText
+        android:id="@+id/etos_genisis"
+        android:layout_width="380dp"
+        android:layout_height="40dp"
+        android:background="@drawable/corners"
+        android:hint="Έτος γέννησης:"
+        tools:layout_editor_absoluteX="15dp"
+        tools:layout_editor_absoluteY="403dp" />
+
+    <Button
+        android:layout_width="398dp"
+        android:layout_height="43dp"
+        android:background="@drawable/button_color"
+        android:text="INSERT"
+        android:textSize="16dp"
+        android:textStyle="bold"
+        tools:layout_editor_absoluteX="6dp"
+        tools:layout_editor_absoluteY="548dp" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

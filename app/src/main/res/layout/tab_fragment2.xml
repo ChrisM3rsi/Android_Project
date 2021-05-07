@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="188dp"
+        android:layout_height="53dp"
+        android:text="ΟΜΑΔΑ"
+        android:textColor="@color/black"
+        android:textSize="30dp"
+        android:textStyle="italic"
+        tools:layout_editor_absoluteX="130dp"
+        tools:layout_editor_absoluteY="16dp" />
+
+
+    <EditText
+        android:id="@+id/kwdikos_omadas"
+        android:layout_width="380dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="20dp"
+        android:background="@drawable/corners"
+        android:hint="Κωδικός Ομάδας:"
+        app:layout_constraintBottom_toTopOf="@+id/onoma_omadas"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.516"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView4"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <EditText
+        android:id="@+id/onoma_gipedou"
+        android:layout_width="380dp"
+        android:layout_height="40dp"
+        android:background="@drawable/corners"
+        android:hint="Όνομα γηπέδου:"
+        tools:layout_editor_absoluteX="15dp"
+        tools:layout_editor_absoluteY="211dp" />
+
+    <EditText
+        android:id="@+id/onoma_omadas"
+        android:layout_width="380dp"
+        android:layout_height="40dp"
+        android:background="@drawable/corners"
+        android:hint="Όνομα:"
+        tools:layout_editor_absoluteX="16dp"
+        tools:layout_editor_absoluteY="152dp" />
+
+    <EditText
+        android:id="@+id/poli_omadas"
+        android:layout_width="380dp"
+        android:layout_height="40dp"
+        android:background="@drawable/corners"
+        android:hint="Πόλη (έδρα):"
+        tools:layout_editor_absoluteX="15dp"
+        tools:layout_editor_absoluteY="280dp" />
+
+    <EditText
+        android:id="@+id/xwra_omadas"
+        android:layout_width="380dp"
+        android:layout_height="40dp"
+        android:background="@drawable/corners"
+        android:hint="Χώρα:"
+        tools:layout_editor_absoluteX="15dp"
+        tools:layout_editor_absoluteY="340dp" />
+
+    <EditText
+        android:id="@+id/kwdikos_athlimatos_omadas"
+        android:layout_width="380dp"
+        android:layout_height="40dp"
+        android:background="@drawable/corners"
+        android:hint="Κωδικός Αθλήματος:"
+        tools:layout_editor_absoluteX="15dp"
+        tools:layout_editor_absoluteY="465dp" />
+
+    <EditText
+        android:id="@+id/etos_idrisis"
+        android:layout_width="380dp"
+        android:layout_height="40dp"
+        android:background="@drawable/corners"
+        android:hint="Έτος ίδρυσης:"
+        tools:layout_editor_absoluteX="15dp"
+        tools:layout_editor_absoluteY="403dp" />
+
+    <Button
+        android:layout_width="398dp"
+        android:layout_height="43dp"
+        android:background="@drawable/button_color"
+        android:text="INSERT"
+        android:textSize="16dp"
+        android:textStyle="bold"
+        tools:layout_editor_absoluteX="6dp"
+        tools:layout_editor_absoluteY="568dp" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
