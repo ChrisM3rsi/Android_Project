@@ -11,9 +11,11 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
+import java.util.List;
+
 /**
  * A simple {@link Fragment} subclass.
- * Use the {@link Insert#newInstance} factory method to
+
  * create an instance of this fragment.
  */
 public class InsertFragment extends Fragment {
@@ -64,16 +66,17 @@ public class InsertFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         View view =inflater.inflate(R.layout.fragment_insert,container,false);
-        kwdikos=view.findViewById(R.id.kwdikos);
-        onoma= view.findViewById(R.id.onoma);
-        fullo=view.findViewById(R.id.fullo);
-        eidos=view.findViewById(R.id.eidos);
-        bt= (Button) view.findViewById(R.id.insertbt);
+        kwdikos=view.findViewById(R.id.kwdikos_ins_athlima);
+        onoma= view.findViewById(R.id.onoma_ins_athlima);
+        fullo=view.findViewById(R.id.fullo_ins_athlima);
+        eidos=view.findViewById(R.id.eidos_ins_athlima);
+        bt= (Button) view.findViewById(R.id.insertbt_athlima);
         bt.setOnClickListener(new View.OnClickListener(){
 
             @Override
             public void onClick(View v) {
-                int user_id=0;
+                boolean flag=true;
+                int user_id=-1;
                 try {
                     user_id=Integer.parseInt(kwdikos.getText().toString());
                 }
@@ -83,9 +86,13 @@ public class InsertFragment extends Fragment {
                 String user_onoma=onoma.getText().toString();
                 String user_eidos=eidos.getText().toString();
                 String user_fullo=fullo.getText().toString();
-                if(user_onoma.isEmpty() || user_eidos.isEmpty() || user_fullo.isEmpty() || user_id==0){
+
+
+               if(user_onoma.isEmpty() || user_eidos.isEmpty() || user_fullo.isEmpty() || user_id==-1){
                     Toast.makeText(getActivity(), "Please insert all fields!", Toast.LENGTH_SHORT).show();
                 }
+
+
                 else {
                     Sports_Class_Local sport = new Sports_Class_Local();
                     sport.setId(user_id);

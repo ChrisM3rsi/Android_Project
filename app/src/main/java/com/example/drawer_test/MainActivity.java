@@ -2,10 +2,8 @@ package com.example.drawer_test;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.constraintlayout.widget.ConstraintLayout;
 import androidx.drawerlayout.widget.DrawerLayout;
 import androidx.fragment.app.Fragment;
-import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
 import androidx.room.Room;
 
@@ -15,7 +13,6 @@ import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
-import android.widget.FrameLayout;
 import android.widget.Toast;
 
 import com.google.android.material.navigation.NavigationView;
@@ -51,22 +48,28 @@ public class MainActivity extends AppCompatActivity {
                     case R.id.insert:
                         item.setChecked(true);
                         InsertFragment insertFragment= new InsertFragment();
-                        getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,insertFragment).addToBackStack(null).commit();
-                        displayMessage("insert selected");
+                        getSupportFragmentManager().beginTransaction().setCustomAnimations(R.anim.enter_left_to_right, R.anim.exit_left_to_right).replace(R.id.fragment_container,insertFragment).addToBackStack(null).commit();
                         drawerLayout.closeDrawers();
                         return true;
 
                     case R.id.update:
                         item.setChecked(true);
                         UpdateFragment updateFragment= new UpdateFragment();
-                        getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,updateFragment).addToBackStack(null).commit();
-                        displayMessage("update selected");
+                        getSupportFragmentManager().beginTransaction().setCustomAnimations(R.anim.enter_left_to_right, R.anim.exit_left_to_right).replace(R.id.fragment_container,updateFragment).addToBackStack(null).commit();
                         drawerLayout.closeDrawers();
                         return true;
 
+                    case R.id.delete:
+                        item.setChecked(true);
+                        DeleteFragment deleteFragment=new DeleteFragment();
+                        getSupportFragmentManager().beginTransaction().setCustomAnimations(R.anim.enter_left_to_right, R.anim.exit_left_to_right).replace(R.id.fragment_container,deleteFragment).addToBackStack(null).commit();
+                        drawerLayout.closeDrawers();
+                        return true;
+
+
                     case R.id.home:
                         item.setChecked(true);
-                        displayMessage("home selected");
+                        getSupportFragmentManager().beginTransaction().setCustomAnimations(R.anim.enter_left_to_right, R.anim.exit_left_to_right).replace(R.id.fragment_container,welcome).addToBackStack(null).commit();
                         drawerLayout.closeDrawers();
                         return true;
                 }

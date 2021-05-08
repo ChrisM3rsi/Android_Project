@@ -1,15 +1,88 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/update_fragment_athlima"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".UpdateFragment"
-    android:id="@+id/update">
+    tools:context=".UpdateFragment">
 
     <!-- TODO: Update blank fragment layout -->
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="this is update fragment" />
 
-</FrameLayout>
+
+    <TextView
+        android:id="@+id/textView7"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="80dp"
+        android:text="ΑΘΛΗΜΑ"
+        android:textAlignment="center"
+        android:textColor="@color/black"
+        android:textSize="30dp"
+        android:textStyle="italic"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/kwdikos_up_athlima"
+        android:layout_width="380dp"
+        android:layout_height="40dp"
+
+        android:layout_marginTop="48dp"
+        android:hint="Κωδικός Αθλήματος:"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView7" />
+
+    <EditText
+        android:id="@+id/onoma_up_athlima"
+        android:layout_width="380dp"
+        android:layout_height="40dp"
+
+        android:layout_marginTop="24dp"
+        android:hint="Όνομα Αθλήματος:"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/kwdikos_up_athlima" />
+
+    <EditText
+        android:id="@+id/eidos_up_athlima"
+        android:layout_width="380dp"
+        android:layout_height="40dp"
+
+        android:layout_marginTop="24dp"
+        android:hint="Είδος Αθλήματος (Ατομικό / Ομαδικό):"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/onoma_up_athlima" />
+
+    <EditText
+        android:id="@+id/fullo_up_athlima"
+        android:layout_width="380dp"
+        android:layout_height="40dp"
+
+        android:layout_marginTop="24dp"
+        android:hint="Φύλλο:"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.516"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/eidos_up_athlima" />
+
+    <Button
+        android:id="@+id/updatebt_athlima"
+        android:layout_width="381dp"
+        android:layout_height="43dp"
+
+        android:layout_marginTop="16dp"
+        android:backgroundTint="@color/mple"
+        android:text="UPDATE"
+        android:textSize="16dp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/fullo_up_athlima" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
