@@ -105,26 +105,6 @@ public class MainActivity extends AppCompatActivity {
         return true;
     }
 
-    @Override
-    public boolean onOptionsItemSelected(@NonNull MenuItem item) {
-        switch (item.getItemId()){
-            case  R.id.insert: {
-                Toast.makeText(this,"insert selected",Toast.LENGTH_LONG).show();
-                return true;
-            }
-            case R.id.update:{
-                UpdateFragment updateFragment= new UpdateFragment();
-                FragmentTransaction transaction=getSupportFragmentManager().beginTransaction();
-                transaction.replace(R.id.fragment_container,updateFragment);
-                transaction.addToBackStack(null);
-                transaction.commit();
-                Fragment fragment= getSupportFragmentManager().findFragmentById(R.id.fragment_container);
-                fragment.getView().setBackgroundColor(Color.BLACK);
-                Toast.makeText(this,"update selected",Toast.LENGTH_LONG).show();
-                return true;
-            }
-            default:
-                return super.onOptionsItemSelected(item);
-        }
-    }
+
+
 }

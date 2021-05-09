@@ -84,7 +84,7 @@ public class UpdateFragment extends Fragment {
                 String user_eidos=eidos.getText().toString();
                 String user_fullo=fullo.getText().toString();
 
-                List<Sports_Class_Local> sports=MainActivity.sports_db_local.Sports_Dao_Local().getSports();
+                List<Sports_Class_Local> sports=MainActivity.sports_db_local.myDao().getSports();
                 for (Sports_Class_Local i: sports){
                     int id =i.getId();
                     if(id == user_id){
@@ -104,7 +104,7 @@ public class UpdateFragment extends Fragment {
                     sport.setName(user_onoma);
                     sport.setType(user_eidos);
                     sport.setGender(user_fullo);
-                    MainActivity.sports_db_local.Sports_Dao_Local().updateSport(sport);
+                    MainActivity.sports_db_local.myDao().updateSport(sport);
                     Toast.makeText(getActivity(), "update successful!", Toast.LENGTH_LONG).show();
 
 

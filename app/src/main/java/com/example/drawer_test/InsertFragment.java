@@ -75,7 +75,7 @@ public class InsertFragment extends Fragment {
 
             @Override
             public void onClick(View v) {
-                boolean flag=true;
+                boolean flag=false;
                 int user_id=-1;
                 try {
                     user_id=Integer.parseInt(kwdikos.getText().toString());
@@ -86,9 +86,19 @@ public class InsertFragment extends Fragment {
                 String user_onoma=onoma.getText().toString();
                 String user_eidos=eidos.getText().toString();
                 String user_fullo=fullo.getText().toString();
+                List<Sports_Class_Local> sports=MainActivity.sports_db_local.myDao().getSports();
+                for (Sports_Class_Local i: sports){
+                    int id =i.getId();
+                    if(id == user_id){
+                        flag=true;
+                    }
+                }
 
+                if (flag){
+                    Toast.makeText(getActivity(),"oops, this id allready exists try another one!",Toast.LENGTH_SHORT).show();
+                }
 
-               if(user_onoma.isEmpty() || user_eidos.isEmpty() || user_fullo.isEmpty() || user_id==-1){
+               else if(user_onoma.isEmpty() || user_eidos.isEmpty() || user_fullo.isEmpty() || user_id==-1){
                     Toast.makeText(getActivity(), "Please insert all fields!", Toast.LENGTH_SHORT).show();
                 }
 
@@ -99,7 +109,7 @@ public class InsertFragment extends Fragment {
                     sport.setName(user_onoma);
                     sport.setType(user_eidos);
                     sport.setGender(user_fullo);
-                    MainActivity.sports_db_local.Sports_Dao_Local().addSport(sport);
+                    MainActivity.sports_db_local.myDao().addSport(sport);
                     Toast.makeText(getActivity(), "insert successful!", Toast.LENGTH_LONG).show();
 
 

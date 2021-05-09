@@ -80,7 +80,7 @@ public class DeleteFragment extends Fragment {
                 catch (NumberFormatException e){
                     System.out.println("Could not parse " + e);
                 }
-                List<Sports_Class_Local> sports=MainActivity.sports_db_local.Sports_Dao_Local().getSports();
+                List<Sports_Class_Local> sports=MainActivity.sports_db_local.myDao().getSports();
                 for (Sports_Class_Local i: sports){
                     int id =i.getId();
                     if(id == user_id){
@@ -98,7 +98,7 @@ public class DeleteFragment extends Fragment {
                 else {
                     Sports_Class_Local sport = new Sports_Class_Local();
                     sport.setId(user_id);
-                    MainActivity.sports_db_local.Sports_Dao_Local().DeleteSport(sport);
+                    MainActivity.sports_db_local.myDao().deleteSport(sport);
                     Toast.makeText(getActivity(), "delete successful!", Toast.LENGTH_LONG).show();
 
 
