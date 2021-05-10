@@ -2,4 +2,16 @@
     <string name="app_name">Drawer_test</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    <string-array name="show_queries">
+        <item> Εμφανίσε όλα τα αθλήματα</item>
+        <item> Εμφάνισε όλους τους αθλητές</item>
+        <item> Εμφάνισε όλες τις ομάδες</item>
+    </string-array>
+
+    <string-array name="search_queries">
+        <item> Αναζήτηση αθλήματος μέσω κωδικού </item>
+        <item> Αναζήτηση αθλητή μέσω κωδικού </item>
+        <item> Αναζήτηση ομάδας μέσω κωδικού </item>
+    </string-array>
 </resources>

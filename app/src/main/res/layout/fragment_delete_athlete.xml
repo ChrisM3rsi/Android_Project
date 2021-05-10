@@ -3,16 +3,17 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    tools:context=".DeleteFragment">
+    android:layout_height="match_parent"
+    tools:context=".DeleteAthleteFragment">
 
     <!-- TODO: Update blank fragment layout -->
+
     <TextView
         android:id="@+id/textView7"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="80dp"
-        android:text="ΔΙΑΓΡΑΦΗ ΑΘΛΗΜΑΤΟΣ"
+        android:text="ΔΙΑΓΡΑΦΗ ΑΘΛΗTH"
         android:textAlignment="center"
         android:textColor="@color/black"
         android:textSize="30dp"
@@ -21,21 +22,19 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-
     <EditText
-        android:id="@+id/kwdikos_del_athlima"
+        android:id="@+id/kwdikos_del_athliti"
         android:layout_width="380dp"
         android:layout_height="40dp"
-        android:layout_marginTop="48dp"
 
-        android:hint="Κωδικός Αθλήματος:"
+        android:layout_marginTop="24dp"
+        android:hint="Κωδικός Αθλητή:"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView7" />
 
-
     <Button
-        android:id="@+id/deletebt_athlima"
+        android:id="@+id/deletebt_athliti"
         android:layout_width="381dp"
         android:layout_height="43dp"
 
@@ -46,6 +45,6 @@
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/kwdikos_del_athlima" />
+        app:layout_constraintTop_toBottomOf="@+id/kwdikos_del_athliti" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

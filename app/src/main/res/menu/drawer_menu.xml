@@ -9,20 +9,76 @@
             android:title="Home">
             ></item>
 
+
+
         <item
             android:id="@+id/insert"
-            android:title="Insert">
+            android:title="INSERT"
+
+            >
+            <menu>
+
+            <item
+                android:id="@+id/insert_athlimatos"
+                android:title="Insert Athlimatos"
+                >
             </item>
+
+            <item
+                android:id="@+id/insert_athliti"
+                android:title="Insert Athliti"
+                >
+            </item>
+            </menu>
+
+        </item>
         <item
             android:id="@+id/update"
-            android:title="Update"
+            android:title="UPDATE"
             >
+            <menu>
+                <item android:id="@+id/update_athlimatos"
+                    android:title="Update Athlimatos">
+
+                </item>
+                <item android:id="@+id/update_athliti"
+                        android:title="Update Athliti">
+
+                </item>
+            </menu>
         </item>
+
+
     <item
         android:id="@+id/delete"
-        android:title="Delete">
+        android:title="DELETE">
+        <menu>
+            <item android:id="@+id/delete_athlimatos"
+                android:title="Delete Athlimatos">
+
+            </item>
+            <item android:id="@+id/delete_athliti"
+                android:title="Delete Athliti">
+
+            </item>
+        </menu>
 
     </item>
+        <item
+            android:id="@+id/queries"
+            android:title="QUERIES">
+        <menu>
+            <item android:id="@+id/emfanisi"
+                android:title="Emfanisi">
+
+            </item>
+            <item android:id="@+id/anazitisi"
+                android:title="Anazitisi">
+
+            </item>
+        </menu>
+        </item>
     </group>
+
 
 </menu>

@@ -1,11 +1,22 @@
 package com.example.drawer_test;
 
+import androidx.annotation.NonNull;
 import androidx.room.ColumnInfo;
 import androidx.room.Entity;
+import androidx.room.ForeignKey;
 import androidx.room.PrimaryKey;
 
-@Entity(tableName = "athletes")
-public class athlete_Class_Local {
+@Entity(tableName = "athletes",foreignKeys = {
+        @ForeignKey(entity = Sports_Class_Local.class,
+                parentColumns ="Sport_id",
+                childColumns ="sportCode",
+                onDelete = ForeignKey.CASCADE,
+                onUpdate = ForeignKey.CASCADE
+        )
+})
+
+
+public class Athlete_Class_Local {
     @PrimaryKey
     @ColumnInfo(name="aid")
     private int id;
@@ -19,7 +30,13 @@ public class athlete_Class_Local {
     @ColumnInfo(name="home")
     private String edra;
 
-    @ColumnInfo(name="sport code")
+    @ColumnInfo(name="origin")
+    private String xwra;
+
+
+
+    @ColumnInfo(name="sportCode")
+    @NonNull
     private  int sportId;
 
     @ColumnInfo(name="born")
@@ -71,5 +88,13 @@ public class athlete_Class_Local {
 
     public void setEtosGennisis(String etosGennisis) {
         this.etosGennisis = etosGennisis;
+    }
+
+    public String getXwra() {
+        return xwra;
+    }
+
+    public void setXwra(String xwra) {
+        this.xwra = xwra;
     }
 }

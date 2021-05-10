@@ -23,17 +23,19 @@ public interface myDao {
     public  void updateSport(Sports_Class_Local sport);
 
     @Insert
-    public  void addAthlete(athlete_Class_Local athlete);
+    public  void addAthlete(Athlete_Class_Local athlete);
 
     @Delete
-    public void  deleteAthlete(athlete_Class_Local athlete);
+    public void  deleteAthlete(Athlete_Class_Local athlete);
 
     @Update
-    public void updateAthlete(athlete_Class_Local athlete);
+    public void updateAthlete(Athlete_Class_Local athlete);
 
     @Query("Select * from athletes")
-    public List<athlete_Class_Local> getAthletes();
+    public List<Athlete_Class_Local> getAthletes();
 
+    @Query("Select * from Sports where Sport_id=:code")
+    public Sports_Class_Local getSport(int code);
 
 
 }

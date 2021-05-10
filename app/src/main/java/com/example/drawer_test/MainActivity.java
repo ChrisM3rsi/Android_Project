@@ -44,28 +44,64 @@ public class MainActivity extends AppCompatActivity {
         navigationView.setNavigationItemSelectedListener(new NavigationView.OnNavigationItemSelectedListener() {
             @Override
             public boolean onNavigationItemSelected(@NonNull MenuItem item) {
+
                 switch (item.getItemId()) {
-                    case R.id.insert:
+
+                    case R.id.insert_athlimatos:
                         item.setChecked(true);
                         InsertFragment insertFragment= new InsertFragment();
                         getSupportFragmentManager().beginTransaction().setCustomAnimations(R.anim.enter_left_to_right, R.anim.exit_left_to_right).replace(R.id.fragment_container,insertFragment).addToBackStack(null).commit();
                         drawerLayout.closeDrawers();
                         return true;
 
-                    case R.id.update:
+                    case R.id.insert_athliti:
+                        item.setChecked(true);
+                        InsertAthleteFragment insertAthleteFragment= new InsertAthleteFragment();
+                        getSupportFragmentManager().beginTransaction().setCustomAnimations(R.anim.enter_left_to_right, R.anim.exit_left_to_right).replace(R.id.fragment_container,insertAthleteFragment).addToBackStack(null).commit();
+                        drawerLayout.closeDrawers();
+                        return true;
+
+                    case R.id.update_athlimatos:
                         item.setChecked(true);
                         UpdateFragment updateFragment= new UpdateFragment();
                         getSupportFragmentManager().beginTransaction().setCustomAnimations(R.anim.enter_left_to_right, R.anim.exit_left_to_right).replace(R.id.fragment_container,updateFragment).addToBackStack(null).commit();
                         drawerLayout.closeDrawers();
                         return true;
 
-                    case R.id.delete:
+                    case R.id.emfanisi:
+                        item.setChecked(true);
+                        Show_Queries show_queries=new Show_Queries();
+                        getSupportFragmentManager().beginTransaction().setCustomAnimations(R.anim.enter_left_to_right, R.anim.exit_left_to_right).replace(R.id.fragment_container,show_queries).addToBackStack(null).commit();
+                        drawerLayout.closeDrawers();
+                        return true;
+
+                    case R.id.anazitisi:
+                        item.setChecked(true);
+                        Search_Queries search_queries=new Search_Queries();
+                        getSupportFragmentManager().beginTransaction().setCustomAnimations(R.anim.enter_left_to_right, R.anim.exit_left_to_right).replace(R.id.fragment_container,search_queries).addToBackStack(null).commit();
+                        drawerLayout.closeDrawers();
+                        return true;
+
+                    case R.id.update_athliti:
+                        item.setChecked(true);
+                        UpdateAthleteFragment updateAthleteFragment=new UpdateAthleteFragment();
+                        getSupportFragmentManager().beginTransaction().setCustomAnimations(R.anim.enter_left_to_right, R.anim.exit_left_to_right).replace(R.id.fragment_container,updateAthleteFragment).addToBackStack(null).commit();
+                        drawerLayout.closeDrawers();
+                        return true;
+
+                    case R.id.delete_athlimatos:
                         item.setChecked(true);
                         DeleteFragment deleteFragment=new DeleteFragment();
                         getSupportFragmentManager().beginTransaction().setCustomAnimations(R.anim.enter_left_to_right, R.anim.exit_left_to_right).replace(R.id.fragment_container,deleteFragment).addToBackStack(null).commit();
                         drawerLayout.closeDrawers();
                         return true;
 
+                    case R.id.delete_athliti:
+                        item.setChecked(true);
+                        DeleteAthleteFragment deleteAthleteFragment=new DeleteAthleteFragment();
+                        getSupportFragmentManager().beginTransaction().setCustomAnimations(R.anim.enter_left_to_right, R.anim.exit_left_to_right).replace(R.id.fragment_container,deleteAthleteFragment).addToBackStack(null).commit();
+                        drawerLayout.closeDrawers();
+                        return true;
 
                     case R.id.home:
                         item.setChecked(true);

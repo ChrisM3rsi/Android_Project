@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".InsertAthleteFragment">
+
+    <!-- TODO: Update blank fragment layout -->
+
+    <TextView
+        android:id="@+id/textView7"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="80dp"
+        android:text="ΕΙΣΑΓΩΓΗ ΑΘΛΗTH"
+        android:textAlignment="center"
+        android:textColor="@color/black"
+        android:textSize="30dp"
+        android:textStyle="italic"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/kwdikos_ins_athliti"
+        android:layout_width="380dp"
+        android:layout_height="40dp"
+
+        android:layout_marginTop="24dp"
+        android:hint="Κωδικός Αθλητή:"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView7" />
+
+    <EditText
+        android:id="@+id/onoma_ins_athliti"
+        android:layout_width="380dp"
+        android:layout_height="40dp"
+
+        android:layout_marginTop="24dp"
+        android:hint="Όνομα Αθλητή:"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/kwdikos_ins_athliti" />
+
+    <EditText
+        android:id="@+id/eponumo_ins_athliti"
+        android:layout_width="380dp"
+        android:layout_height="40dp"
+
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="16dp"
+        android:hint="Επώνυμο Αθλητή:"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/onoma_ins_athliti" />
+
+    <EditText
+        android:id="@+id/edra_ins_athliti"
+        android:layout_width="380dp"
+        android:layout_height="40dp"
+
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="16dp"
+        android:hint="Εδρα:"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/eponumo_ins_athliti" />
+
+    <EditText
+        android:id="@+id/xwra_ins_athliti"
+        android:layout_width="380dp"
+        android:layout_height="40dp"
+
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="16dp"
+        android:hint="Χώρα:"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/edra_ins_athliti" />
+
+    <EditText
+        android:id="@+id/kwdikos_Athlimatos_ins_athliti"
+        android:layout_width="380dp"
+        android:layout_height="40dp"
+
+        android:layout_marginTop="24dp"
+        android:hint="Κωδικός Αθλήματος:"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/xwra_ins_athliti" />
+
+    <EditText
+        android:id="@+id/gennisi_ins_athliti"
+        android:layout_width="380dp"
+        android:layout_height="40dp"
+
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="16dp"
+        android:hint="Έτος Γέννησης:"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/kwdikos_Athlimatos_ins_athliti" />
+
+    <Button
+        android:id="@+id/insertbt_athliti"
+        android:layout_width="381dp"
+        android:layout_height="43dp"
+
+        android:layout_marginTop="16dp"
+        android:backgroundTint="@color/mple"
+        android:text="INSERT"
+        android:textSize="16dp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/gennisi_ins_athliti" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
