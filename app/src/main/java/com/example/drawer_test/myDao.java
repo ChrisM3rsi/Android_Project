@@ -37,6 +37,9 @@ public interface myDao {
     @Query("Select * from Sports where Sport_id=:code")
     public Sports_Class_Local getSport(int code);
 
+    @Update
+    public void updateOmada(Omada_Class_Local omada);
+
     @Insert
     public void addOmada(Omada_Class_Local omada);
 

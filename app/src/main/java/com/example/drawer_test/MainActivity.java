@@ -61,6 +61,13 @@ public class MainActivity extends AppCompatActivity {
                         drawerLayout.closeDrawers();
                         return true;
 
+                    case R.id.insert_omadas:
+                        item.setChecked(true);
+                        InsertOmadaFragment insertOmadaFragment = new InsertOmadaFragment();
+                        getSupportFragmentManager().beginTransaction().setCustomAnimations(R.anim.enter_left_to_right, R.anim.exit_left_to_right).replace(R.id.fragment_container,insertOmadaFragment).addToBackStack(null).commit();
+                        drawerLayout.closeDrawers();
+                        return true;
+
                     case R.id.update_athlimatos:
                         item.setChecked(true);
                         UpdateFragment updateFragment= new UpdateFragment();
@@ -89,6 +96,13 @@ public class MainActivity extends AppCompatActivity {
                         drawerLayout.closeDrawers();
                         return true;
 
+                    case R.id.update_omadas:
+                        item.setChecked(true);
+                        UpdateOmadaFragment updateOmadaFragment =new UpdateOmadaFragment();
+                        getSupportFragmentManager().beginTransaction().setCustomAnimations(R.anim.enter_left_to_right, R.anim.exit_left_to_right).replace(R.id.fragment_container,updateOmadaFragment).addToBackStack(null).commit();
+                        drawerLayout.closeDrawers();
+                        return true;
+
                     case R.id.delete_athlimatos:
                         item.setChecked(true);
                         DeleteFragment deleteFragment=new DeleteFragment();
@@ -103,11 +117,19 @@ public class MainActivity extends AppCompatActivity {
                         drawerLayout.closeDrawers();
                         return true;
 
+                    case R.id.delete_omada:
+                        item.setChecked(true);
+                        DeleteOmadaFragment deleteOmadaFragment =new DeleteOmadaFragment();
+                        getSupportFragmentManager().beginTransaction().setCustomAnimations(R.anim.enter_left_to_right, R.anim.exit_left_to_right).replace(R.id.fragment_container,deleteOmadaFragment).addToBackStack(null).commit();
+                        drawerLayout.closeDrawers();
+                        return true;
+
                     case R.id.home:
                         item.setChecked(true);
                         getSupportFragmentManager().beginTransaction().setCustomAnimations(R.anim.enter_left_to_right, R.anim.exit_left_to_right).replace(R.id.fragment_container,welcome).addToBackStack(null).commit();
                         drawerLayout.closeDrawers();
                         return true;
+
                 }
                 return false;
             }
