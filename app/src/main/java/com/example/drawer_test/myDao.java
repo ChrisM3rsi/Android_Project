@@ -44,6 +44,8 @@ public interface myDao {
     public List<Athlete_Class_Local> getAthletesSport();
 
 
+    @Update
+    public void updateOmada(Omada_Class_Local omada);
 
     @Insert
     public void addTeam(Omada_Class_Local team);

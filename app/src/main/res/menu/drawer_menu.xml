@@ -38,6 +38,13 @@
                 android:title="Insert Athliti"
                 >
             </item>
+             <item
+                 android:id="@+id/insert_omadas"
+                 android:title="Insert Omada"
+                 >
+
+             </item>
+
             </menu>
 
         </item>
@@ -59,6 +66,10 @@
                         android:title="Update Athliti">
 
                 </item>
+                <item android:id="@+id/update_omadas"
+                    android:title="Update Omada">
+
+                </item>
             </menu>
         </item>
 
@@ -78,6 +89,10 @@
 
             <item android:id="@+id/delete_athliti"
                 android:title="Delete Athliti">
+
+            </item>
+            <item android:id="@+id/delete_omada"
+                android:title="Delete Omadas">
 
             </item>
         </menu>

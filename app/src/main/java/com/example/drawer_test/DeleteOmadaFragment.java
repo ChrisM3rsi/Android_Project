@@ -15,10 +15,10 @@ import java.util.List;
 
 /**
  * A simple {@link Fragment} subclass.
- * Use the {@link DeleteAthleteFragment#newInstance} factory method to
+ * Use the {@link DeleteOmadaFragment#newInstance} factory method to
  * create an instance of this fragment.
  */
-public class DeleteAthleteFragment extends Fragment {
+public class DeleteOmadaFragment extends Fragment {
     EditText kwdikos;
     Button bt;
     // TODO: Rename parameter arguments, choose names that match
@@ -30,7 +30,7 @@ public class DeleteAthleteFragment extends Fragment {
     private String mParam1;
     private String mParam2;
 
-    public DeleteAthleteFragment() {
+    public DeleteOmadaFragment() {
         // Required empty public constructor
     }
 
@@ -40,11 +40,11 @@ public class DeleteAthleteFragment extends Fragment {
      *
      * @param param1 Parameter 1.
      * @param param2 Parameter 2.
-     * @return A new instance of fragment DeleteAthleteFragment.
+     * @return A new instance of fragment DeleteOmadaFragment.
      */
     // TODO: Rename and change types and number of parameters
-    public static DeleteAthleteFragment newInstance(String param1, String param2) {
-        DeleteAthleteFragment fragment = new DeleteAthleteFragment();
+    public static DeleteOmadaFragment newInstance(String param1, String param2) {
+        DeleteOmadaFragment fragment = new DeleteOmadaFragment();
         Bundle args = new Bundle();
         args.putString(ARG_PARAM1, param1);
         args.putString(ARG_PARAM2, param2);
@@ -65,8 +65,8 @@ public class DeleteAthleteFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         View view =inflater.inflate(R.layout.fragment_delete,container,false);
-        kwdikos=view.findViewById(R.id.kwdikos_del_athlima);
-        bt= (Button) view.findViewById(R.id.deletebt_athlima);
+        kwdikos=view.findViewById(R.id.kwdikos_del_Omadas);
+        bt= (Button) view.findViewById(R.id.deletebt_omadas);
 
         bt.setOnClickListener(new View.OnClickListener(){
 
@@ -96,9 +96,9 @@ public class DeleteAthleteFragment extends Fragment {
                     Toast.makeText(getActivity(), "Please insert the id!", Toast.LENGTH_SHORT).show();
                 }
                 else {
-                    Athlete_Class_Local athlete = new Athlete_Class_Local();
-                    athlete.setId(user_id);
-                    MainActivity.sports_db_local.myDao().deleteAthlete(athlete);
+                    Omada_Class_Local omada = new Omada_Class_Local();
+                    omada.setId(user_id);
+                    MainActivity.sports_db_local.myDao().deleteOmada(omada);
                     Toast.makeText(getActivity(), "delete successful!", Toast.LENGTH_LONG).show();
 
 
