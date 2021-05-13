@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/emfanisi_fields"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".InsertAtomikoAgwna">
+
+    <!-- TODO: Update blank fragment layout -->
+
+    <TextView
+        android:id="@+id/textView7"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="80dp"
+        android:text="ΕΙΣΑΓΩΓΗ ΑΤΟΜΙΚΟΥ ΑΓΩΝΑ"
+        android:textAlignment="center"
+        android:textColor="@color/black"
+        android:textSize="30dp"
+        android:textStyle="italic"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/kwdikos_insert_agwna"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+
+        android:hint="Κωδικός  Αγώνα:"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/insertbt_arithmo_athlitwn" />
+
+    <EditText
+        android:id="@+id/arithmos_insert_athlitwn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        android:layout_marginTop="24dp"
+        android:hint="Εισαγωγή αριθμό Αθλητών:"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView7" />
+
+    <Button
+        android:id="@+id/insertbt_arithmo_athlitwn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:layout_marginTop="16dp"
+        android:text="Εισαγωγη"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/arithmos_insert_athlitwn" />
+
+    <EditText
+        android:id="@+id/hmeromhnia_insert_athlitwn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        android:hint="Ημερομηνία Αγώνα:"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/kwdikos_insert_agwna" />
+
+    <EditText
+        android:id="@+id/poli_insert_agwna"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Πόλη Αγώνα:"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/hmeromhnia_insert_athlitwn" />
+
+    <EditText
+        android:id="@+id/xwra_insert_agwna"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+
+        android:hint="Χώρα Αγώνα:"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/poli_insert_agwna" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

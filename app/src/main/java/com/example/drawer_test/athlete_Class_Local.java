@@ -2,6 +2,7 @@ package com.example.drawer_test;
 
 import androidx.annotation.NonNull;
 import androidx.room.ColumnInfo;
+import androidx.room.Embedded;
 import androidx.room.Entity;
 import androidx.room.ForeignKey;
 import androidx.room.PrimaryKey;
@@ -17,9 +18,15 @@ import androidx.room.PrimaryKey;
 
 
 public class Athlete_Class_Local {
+
+    @Embedded
+    public Sports_Class_Local sport;
+
     @PrimaryKey
     @ColumnInfo(name="aid")
     private int id;
+
+
 
     @ColumnInfo(name="name")
     private String onoma;
@@ -96,5 +103,13 @@ public class Athlete_Class_Local {
 
     public void setXwra(String xwra) {
         this.xwra = xwra;
+    }
+
+    public Sports_Class_Local getSport() {
+        return sport;
+    }
+
+    public void setSport(Sports_Class_Local sport) {
+        this.sport = sport;
     }
 }

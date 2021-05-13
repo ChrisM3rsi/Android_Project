@@ -7,6 +7,7 @@
         <item> Εμφανίσε όλα τα αθλήματα</item>
         <item> Εμφάνισε όλους τους αθλητές</item>
         <item> Εμφάνισε όλες τις ομάδες</item>
+        <item> Εμφάνισε σε ποια αθλήματα αγωνίζονται οι αθλητές</item>
     </string-array>
 
     <string-array name="search_queries">

@@ -75,73 +75,73 @@ public class UpdateAthleteFragment extends Fragment {
         bt= (Button) view.findViewById(R.id.updatebt_athliti);
         bt.setOnClickListener(new View.OnClickListener(){
 
-            @Override
-            public void onClick(View v) {
-                boolean flag=true;
-                int user_kwdikos=-1;
-                int user_kwdikos_athlimatos=-1;
-                try {
-                    user_kwdikos=Integer.parseInt(kwdikos.getText().toString());
-                }
-                catch (NumberFormatException e){
-                    System.out.println("Could not parse " + e);
-                }
-                String user_onoma=onoma.getText().toString();
-                String user_epwnumo=epwnumo.getText().toString();
-                String user_edra=edra.getText().toString();
-                String user_xwra=xwra.getText().toString();
-                try {
-                    user_kwdikos_athlimatos = Integer.parseInt(kwdikos_athlimatos.getText().toString());
-                }
-                catch (NumberFormatException e){
-                    System.out.println("Could not parse " + e);
-                }
-                String user_gennisi=gennisi.getText().toString();
-
-                List<Athlete_Class_Local> athletes=MainActivity.sports_db_local.myDao().getAthletes();
-                for (Athlete_Class_Local i: athletes){
-                    int id =i.getId();
-                    if(id == user_kwdikos){
-                        flag=false;
-                    }
-                }
-
-                if (flag){
-                    Toast.makeText(getActivity(),"oops, This id does not exist, try another one!",Toast.LENGTH_SHORT).show();
-                }
-                else if(user_onoma.isEmpty() || user_epwnumo.isEmpty() || user_edra.isEmpty() || user_kwdikos==-1 || user_xwra.isEmpty() || user_kwdikos_athlimatos==-1 || user_gennisi.isEmpty()){
-                    Toast.makeText(getActivity(), "Please insert all fields!", Toast.LENGTH_SHORT).show();
-                }
-                else {
+                @Override
+                public void onClick(View v) {
+                    boolean flag=true;
+                    int user_kwdikos=-1;
+                    int user_kwdikos_athlimatos=-1;
                     try {
-                        Athlete_Class_Local athlete = new Athlete_Class_Local();
-                        athlete.setId(user_kwdikos);
-                        athlete.setEdra(user_edra);
-                        athlete.setEpwnumo(user_epwnumo);
-                        athlete.setOnoma(user_onoma);
-                        athlete.setEtosGennisis(user_gennisi);
-                        athlete.setSportId(user_kwdikos_athlimatos);
-                        athlete.setXwra(user_xwra);
-
-                        MainActivity.sports_db_local.myDao().updateAthlete(athlete);
-                        Toast.makeText(getActivity(), "insert successful!", Toast.LENGTH_LONG).show();
+                        user_kwdikos=Integer.parseInt(kwdikos.getText().toString());
                     }
-                    catch (Exception e){
-                        String message=e.getMessage();
-                        Toast.makeText(getActivity(),message,Toast.LENGTH_SHORT).show();
+                    catch (NumberFormatException e){
+                        System.out.println("Could not parse " + e);
+                    }
+                    String user_onoma=onoma.getText().toString();
+                    String user_epwnumo=epwnumo.getText().toString();
+                    String user_edra=edra.getText().toString();
+                    String user_xwra=xwra.getText().toString();
+                    try {
+                        user_kwdikos_athlimatos = Integer.parseInt(kwdikos_athlimatos.getText().toString());
+                    }
+                    catch (NumberFormatException e){
+                        System.out.println("Could not parse " + e);
+                    }
+                    String user_gennisi=gennisi.getText().toString();
+
+                    List<Athlete_Class_Local> athletes=MainActivity.sports_db_local.myDao().getAthletes();
+                    for (Athlete_Class_Local i: athletes){
+                        int id =i.getId();
+                        if(id == user_kwdikos){
+                            flag=false;
+                        }
+                    }
+
+                    if (flag){
+                        Toast.makeText(getActivity(),"oops, This id does not exist, try another one!",Toast.LENGTH_SHORT).show();
+                    }
+                    else if(user_onoma.isEmpty() || user_epwnumo.isEmpty() || user_edra.isEmpty() || user_kwdikos==-1 || user_xwra.isEmpty() || user_kwdikos_athlimatos==-1 || user_gennisi.isEmpty()){
+                        Toast.makeText(getActivity(), "Please insert all fields!", Toast.LENGTH_SHORT).show();
+                    }
+                    else {
+                        try {
+                            Athlete_Class_Local athlete = new Athlete_Class_Local();
+                            athlete.setId(user_kwdikos);
+                            athlete.setEdra(user_edra);
+                            athlete.setEpwnumo(user_epwnumo);
+                            athlete.setOnoma(user_onoma);
+                            athlete.setEtosGennisis(user_gennisi);
+                            athlete.setSportId(user_kwdikos_athlimatos);
+                            athlete.setXwra(user_xwra);
+
+                            MainActivity.sports_db_local.myDao().updateAthlete(athlete);
+                            Toast.makeText(getActivity(), "insert successful!", Toast.LENGTH_LONG).show();
+                        }
+                        catch (Exception e){
+                            String message=e.getMessage();
+                            Toast.makeText(getActivity(),message,Toast.LENGTH_SHORT).show();
+
+                        }
 
                     }
+                    kwdikos.setText("");
+                    onoma.setText("");
+                    epwnumo.setText("");
+                    edra.setText("");
+                    xwra.setText("");
+                    kwdikos_athlimatos.setText("");
+                    gennisi.setText("");
 
                 }
-                kwdikos.setText("");
-                onoma.setText("");
-                epwnumo.setText("");
-                edra.setText("");
-                xwra.setText("");
-                kwdikos_athlimatos.setText("");
-                gennisi.setText("");
-
-            }
         });
         return view;
     }

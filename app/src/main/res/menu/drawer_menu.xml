@@ -6,7 +6,8 @@
         android:enabled="true">
         <item
             android:id="@+id/home"
-            android:title="Home">
+            android:title="Home"
+            >
             ></item>
 
 
@@ -23,6 +24,14 @@
                 android:title="Insert Athlimatos"
                 >
             </item>
+
+                <item android:id="@+id/insert_agwna"
+                    android:title="Insert Agwna">
+
+                </item>
+
+
+
 
             <item
                 android:id="@+id/insert_athliti"
@@ -41,6 +50,11 @@
                     android:title="Update Athlimatos">
 
                 </item>
+                <item android:id="@+id/update_agwna"
+                    android:title="Update Agwna">
+
+                </item>
+
                 <item android:id="@+id/update_athliti"
                         android:title="Update Athliti">
 
@@ -57,6 +71,11 @@
                 android:title="Delete Athlimatos">
 
             </item>
+            <item android:id="@+id/delete_agwna"
+                android:title="Delete Agwna">
+
+            </item>
+
             <item android:id="@+id/delete_athliti"
                 android:title="Delete Athliti">
 
@@ -76,6 +95,7 @@
                 android:title="Anazitisi">
 
             </item>
+
         </menu>
         </item>
     </group>
