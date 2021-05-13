@@ -32,10 +32,10 @@
         android:hint="Κωδικός  Αγώνα:"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/insertbt_arithmo_athlitwn" />
+        app:layout_constraintTop_toBottomOf="@+id/insertbt_arithmo_agwna" />
 
     <EditText
-        android:id="@+id/arithmos_insert_athlitwn"
+        android:id="@+id/arithmos_insert_agwna"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
 
@@ -46,17 +46,17 @@
         app:layout_constraintTop_toBottomOf="@+id/textView7" />
 
     <Button
-        android:id="@+id/insertbt_arithmo_athlitwn"
+        android:id="@+id/insertbt_arithmo_agwna"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
 
         android:layout_marginTop="16dp"
         android:text="Εισαγωγη"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/arithmos_insert_athlitwn" />
+        app:layout_constraintTop_toBottomOf="@+id/arithmos_insert_agwna" />
 
     <EditText
-        android:id="@+id/hmeromhnia_insert_athlitwn"
+        android:id="@+id/hmeromhnia_insert_agwna"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
 
@@ -72,7 +72,7 @@
         android:hint="Πόλη Αγώνα:"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/hmeromhnia_insert_athlitwn" />
+        app:layout_constraintTop_toBottomOf="@+id/hmeromhnia_insert_agwna" />
 
     <EditText
         android:id="@+id/xwra_insert_agwna"

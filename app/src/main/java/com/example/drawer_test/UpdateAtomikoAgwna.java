@@ -102,7 +102,7 @@ public class UpdateAtomikoAgwna extends Fragment {
             public void onClick(View v) {
                 List<athlites> athlites=new ArrayList<athlites>();
 
-                documentReference=MainActivity.remote_db.collection("Agwnes").document(id.getText().toString());
+                documentReference=MainActivity.remote_db.collection("Atomikoi_Agwnes").document(id.getText().toString());
                 documentReference.get().addOnSuccessListener(new OnSuccessListener<DocumentSnapshot>() {
                     @Override
                     public void onSuccess(DocumentSnapshot documentSnapshot) {

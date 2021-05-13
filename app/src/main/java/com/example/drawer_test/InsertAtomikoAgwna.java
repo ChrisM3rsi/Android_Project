@@ -88,13 +88,13 @@ public class InsertAtomikoAgwna extends Fragment {
         View view = inflater.inflate(R.layout.fragment_insert_atomiko_agwna, container, false);
         ConstraintLayout layout = (ConstraintLayout) view.findViewById(R.id.emfanisi_fields);
         ConstraintSet constraintSet=new ConstraintSet();
-        hmeromhnia=view.findViewById(R.id.hmeromhnia_insert_athlitwn);
+        hmeromhnia=view.findViewById(R.id.hmeromhnia_insert_agwna);
         xwra=view.findViewById(R.id.xwra_insert_agwna);
         poli=view.findViewById(R.id.poli_insert_agwna);
         kwdikos=view.findViewById(R.id.kwdikos_insert_agwna);
 
-        arithmos = view.findViewById(R.id.arithmos_insert_athlitwn);
-        btn = (Button) view.findViewById(R.id.insertbt_arithmo_athlitwn);
+        arithmos = view.findViewById(R.id.arithmos_insert_agwna);
+        btn = (Button) view.findViewById(R.id.insertbt_arithmo_agwna);
         EditText[] txt= new EditText[10];
 
         btn.setOnClickListener(new View.OnClickListener() {
@@ -187,7 +187,7 @@ public class InsertAtomikoAgwna extends Fragment {
 
                                 }
                                 agwnas.setAthlites(athlites);
-                                MainActivity.remote_db.collection("Agwnes").document("" + user_kwdikos).set(agwnas).addOnCompleteListener(new OnCompleteListener<Void>() {
+                                MainActivity.remote_db.collection("Atomikoi_Agwnes").document("" + user_kwdikos).set(agwnas).addOnCompleteListener(new OnCompleteListener<Void>() {
                                     @Override
                                     public void onComplete(@NonNull Task<Void> task) {
                                         Toast.makeText(getActivity(), "added successfully!", Toast.LENGTH_SHORT).show();

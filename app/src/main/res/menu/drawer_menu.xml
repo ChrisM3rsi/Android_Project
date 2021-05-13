@@ -23,7 +23,12 @@
                 android:id="@+id/insert_athlimatos"
                 android:title="Insert Athlimatos"
                 >
+
             </item>
+                 <item android:id="@+id/insert_omadas"
+                     android:title="Insert Omadas"
+
+                    ></item>
 
                 <item android:id="@+id/insert_agwna"
                     android:title="Insert Agwna">
@@ -38,13 +43,6 @@
                 android:title="Insert Athliti"
                 >
             </item>
-             <item
-                 android:id="@+id/insert_omadas"
-                 android:title="Insert Omada"
-                 >
-
-             </item>
-
             </menu>
 
         </item>
@@ -67,9 +65,9 @@
 
                 </item>
                 <item android:id="@+id/update_omadas"
-                    android:title="Update Omada">
+                    android:title="Update Omadas"
 
-                </item>
+                    ></item>
             </menu>
         </item>
 
@@ -82,6 +80,10 @@
                 android:title="Delete Athlimatos">
 
             </item>
+            <item android:id="@+id/delete_omadas"
+                android:title="Delete Omadas"
+
+                ></item>
             <item android:id="@+id/delete_agwna"
                 android:title="Delete Agwna">
 
@@ -89,10 +91,6 @@
 
             <item android:id="@+id/delete_athliti"
                 android:title="Delete Athliti">
-
-            </item>
-            <item android:id="@+id/delete_omada"
-                android:title="Delete Omadas">
 
             </item>
         </menu>
