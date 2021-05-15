@@ -64,15 +64,15 @@ public class UpdateOmadaFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        View view =inflater.inflate(R.layout.fragment_insert_omada,container,false);
-        kwdikos_omadas=view.findViewById(R.id.kwdikos_ins_omadas);
-        onoma_gipedou= view.findViewById(R.id.onomaGipedou_ins_omadas);
-        polh=view.findViewById(R.id.poli_ins_omadas);
-        onoma_omadas=view.findViewById(R.id.onomaOmadas_ins_omadas);
-        xwra= view.findViewById(R.id.xwra_ins_athliti);
-        kwdikos_athlimatos=view.findViewById(R.id.kwdikosAthlimatos_ins_omadas);
-        etos_idrisis=view.findViewById(R.id.etosIdrisis_ins_omadas);
-        bt= (Button) view.findViewById(R.id.insertbt_omadas);
+        View view =inflater.inflate(R.layout.fragment_update_omada,container,false);
+        kwdikos_omadas=view.findViewById(R.id.kwdikos_upd_omadas);
+        onoma_gipedou= view.findViewById(R.id.onomaGipedou_upd_omadas);
+        polh=view.findViewById(R.id.poli_upd_omadas);
+        onoma_omadas=view.findViewById(R.id.onomaOmadas_upd_omadas);
+        xwra= view.findViewById(R.id.xwra_upd_omadas);
+        kwdikos_athlimatos=view.findViewById(R.id.kwdikosAthlimatos_upd_omadas);
+        etos_idrisis=view.findViewById(R.id.etosIdrisis_upd_omadas);
+        bt= (Button) view.findViewById(R.id.updatebt_omadas);
         bt.setOnClickListener(new View.OnClickListener(){
 
             @Override
@@ -96,8 +96,8 @@ public class UpdateOmadaFragment extends Fragment {
                 }
                 String user_etosIdrisis = etos_idrisis.getText().toString();
 
-                List<Athlete_Class_Local> athletes = MainActivity.sports_db_local.myDao().getAthletes();
-                for (Athlete_Class_Local i : athletes) {
+                List<Omada_Class_Local> omades = MainActivity.sports_db_local.myDao().getOmades();
+                for (Omada_Class_Local i : omades) {
                     int id = i.getId();
                     if (id == user_kwdikos) {
                         flag = false;
@@ -112,15 +112,15 @@ public class UpdateOmadaFragment extends Fragment {
                     try {
                         Omada_Class_Local omada = new Omada_Class_Local();
                         omada.setId(user_kwdikos);
-                        omada.setOnomaOmadas(user_onomaOmadas);
+                        omada.setOnoma(user_onomaOmadas);
                         omada.setPolh(user_polh);
-                        omada.setOnomaGipedou(user_onomaGipedou);
+                        omada.setGipedo(user_onomaGipedou);
                         omada.setEtosIdrisis(user_etosIdrisis);
                         omada.setSportId(user_kwdikos_omadas);
                         omada.setXwra(user_xwra);
 
                         MainActivity.sports_db_local.myDao().updateOmada(omada);
-                        Toast.makeText(getActivity(), "insert successful!", Toast.LENGTH_LONG).show();
+                        Toast.makeText(getActivity(), "update successful!", Toast.LENGTH_LONG).show();
                     } catch (Exception e) {
                         String message = e.getMessage();
                         Toast.makeText(getActivity(), message, Toast.LENGTH_SHORT).show();

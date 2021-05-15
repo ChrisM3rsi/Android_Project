@@ -16,18 +16,20 @@ import android.view.MenuItem;
 import android.widget.Toast;
 
 import com.google.android.material.navigation.NavigationView;
+import com.google.firebase.firestore.FirebaseFirestore;
 
 public class MainActivity extends AppCompatActivity {
     DrawerLayout drawerLayout;
     NavigationView navigationView;
     public static Sports_Db_Local sports_db_local;
+    public static FirebaseFirestore remote_db;
     @SuppressLint("ResourceType")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         sports_db_local= Room.databaseBuilder(getApplicationContext(),Sports_Db_Local.class,"Athlimatadb").allowMainThreadQueries().build();
-
+        remote_db=FirebaseFirestore.getInstance();
         drawerLayout=findViewById(R.id.drawer_layout);
         navigationView=findViewById(R.id.navigationView);
 
@@ -54,17 +56,45 @@ public class MainActivity extends AppCompatActivity {
                         drawerLayout.closeDrawers();
                         return true;
 
+                    case R.id.insert_omadas:
+                        item.setChecked(true);
+                        InsertOmadaFragment insertOmadaFragment= new InsertOmadaFragment();
+                        getSupportFragmentManager().beginTransaction().setCustomAnimations(R.anim.enter_left_to_right, R.anim.exit_left_to_right).replace(R.id.fragment_container,insertOmadaFragment).addToBackStack(null).commit();
+                        drawerLayout.closeDrawers();
+                        return true;
+
+                    case R.id.update_omadas:
+                        item.setChecked(true);
+                        UpdateOmadaFragment updateOmadaFragment= new UpdateOmadaFragment();
+                        getSupportFragmentManager().beginTransaction().setCustomAnimations(R.anim.enter_left_to_right, R.anim.exit_left_to_right).replace(R.id.fragment_container,updateOmadaFragment).addToBackStack(null).commit();
+                        drawerLayout.closeDrawers();
+                        return true;
+                    case R.id.delete_omadas:
+                        item.setChecked(true);
+                        DeleteOmadaFragment deleteOmadaFragment= new DeleteOmadaFragment();
+                        getSupportFragmentManager().beginTransaction().setCustomAnimations(R.anim.enter_left_to_right, R.anim.exit_left_to_right).replace(R.id.fragment_container,deleteOmadaFragment).addToBackStack(null).commit();
+                        drawerLayout.closeDrawers();
+                        return true;
+
+
+
+                    case R.id.update_agwna:
+                        item.setChecked(true);
+                        UpdateAgwnaFragment updateAgwnaFragment= new UpdateAgwnaFragment();
+                        getSupportFragmentManager().beginTransaction().setCustomAnimations(R.anim.enter_left_to_right, R.anim.exit_left_to_right).replace(R.id.fragment_container,updateAgwnaFragment).addToBackStack(null).commit();
+                        drawerLayout.closeDrawers();
+                        return true;
+
+                    case R.id.insert_agwna:
+                        item.setChecked(true);
+                        InsertAgwnaFragment insertAgwnaFragment= new InsertAgwnaFragment();
+                        getSupportFragmentManager().beginTransaction().setCustomAnimations(R.anim.enter_left_to_right, R.anim.exit_left_to_right).replace(R.id.fragment_container,insertAgwnaFragment).addToBackStack(null).commit();
+                        drawerLayout.closeDrawers();
+                        return true;
                     case R.id.insert_athliti:
                         item.setChecked(true);
                         InsertAthleteFragment insertAthleteFragment= new InsertAthleteFragment();
                         getSupportFragmentManager().beginTransaction().setCustomAnimations(R.anim.enter_left_to_right, R.anim.exit_left_to_right).replace(R.id.fragment_container,insertAthleteFragment).addToBackStack(null).commit();
-                        drawerLayout.closeDrawers();
-                        return true;
-
-                    case R.id.insert_omadas:
-                        item.setChecked(true);
-                        InsertOmadaFragment insertOmadaFragment = new InsertOmadaFragment();
-                        getSupportFragmentManager().beginTransaction().setCustomAnimations(R.anim.enter_left_to_right, R.anim.exit_left_to_right).replace(R.id.fragment_container,insertOmadaFragment).addToBackStack(null).commit();
                         drawerLayout.closeDrawers();
                         return true;
 
@@ -96,13 +126,6 @@ public class MainActivity extends AppCompatActivity {
                         drawerLayout.closeDrawers();
                         return true;
 
-                    case R.id.update_omadas:
-                        item.setChecked(true);
-                        UpdateOmadaFragment updateOmadaFragment =new UpdateOmadaFragment();
-                        getSupportFragmentManager().beginTransaction().setCustomAnimations(R.anim.enter_left_to_right, R.anim.exit_left_to_right).replace(R.id.fragment_container,updateOmadaFragment).addToBackStack(null).commit();
-                        drawerLayout.closeDrawers();
-                        return true;
-
                     case R.id.delete_athlimatos:
                         item.setChecked(true);
                         DeleteFragment deleteFragment=new DeleteFragment();
@@ -117,19 +140,11 @@ public class MainActivity extends AppCompatActivity {
                         drawerLayout.closeDrawers();
                         return true;
 
-                    case R.id.delete_omada:
-                        item.setChecked(true);
-                        DeleteOmadaFragment deleteOmadaFragment =new DeleteOmadaFragment();
-                        getSupportFragmentManager().beginTransaction().setCustomAnimations(R.anim.enter_left_to_right, R.anim.exit_left_to_right).replace(R.id.fragment_container,deleteOmadaFragment).addToBackStack(null).commit();
-                        drawerLayout.closeDrawers();
-                        return true;
-
                     case R.id.home:
                         item.setChecked(true);
                         getSupportFragmentManager().beginTransaction().setCustomAnimations(R.anim.enter_left_to_right, R.anim.exit_left_to_right).replace(R.id.fragment_container,welcome).addToBackStack(null).commit();
                         drawerLayout.closeDrawers();
                         return true;
-
                 }
                 return false;
             }

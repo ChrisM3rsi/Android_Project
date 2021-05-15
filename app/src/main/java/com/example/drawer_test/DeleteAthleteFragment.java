@@ -15,10 +15,10 @@ import java.util.List;
 
 /**
  * A simple {@link Fragment} subclass.
- * Use the {@link DeleteOmadaFragment#newInstance} factory method to
+ * Use the {@link DeleteAthleteFragment#newInstance} factory method to
  * create an instance of this fragment.
  */
-public class DeleteOmadaFragment extends Fragment {
+public class DeleteAthleteFragment extends Fragment {
     EditText kwdikos;
     Button bt;
     // TODO: Rename parameter arguments, choose names that match
@@ -30,7 +30,7 @@ public class DeleteOmadaFragment extends Fragment {
     private String mParam1;
     private String mParam2;
 
-    public DeleteOmadaFragment() {
+    public DeleteAthleteFragment() {
         // Required empty public constructor
     }
 
@@ -40,11 +40,11 @@ public class DeleteOmadaFragment extends Fragment {
      *
      * @param param1 Parameter 1.
      * @param param2 Parameter 2.
-     * @return A new instance of fragment DeleteOmadaFragment.
+     * @return A new instance of fragment DeleteAthleteFragment.
      */
     // TODO: Rename and change types and number of parameters
-    public static DeleteOmadaFragment newInstance(String param1, String param2) {
-        DeleteOmadaFragment fragment = new DeleteOmadaFragment();
+    public static DeleteAthleteFragment newInstance(String param1, String param2) {
+        DeleteAthleteFragment fragment = new DeleteAthleteFragment();
         Bundle args = new Bundle();
         args.putString(ARG_PARAM1, param1);
         args.putString(ARG_PARAM2, param2);
@@ -64,9 +64,9 @@ public class DeleteOmadaFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        View view =inflater.inflate(R.layout.fragment_delete_omada,container,false);
-        kwdikos=view.findViewById(R.id.kwdikos_del_Omadas);
-        bt= (Button) view.findViewById(R.id.deletebt_omadas);
+        View view =inflater.inflate(R.layout.fragment_delete,container,false);
+        kwdikos=view.findViewById(R.id.kwdikos_del_athlima);
+        bt= (Button) view.findViewById(R.id.deletebt_athlima);
 
         bt.setOnClickListener(new View.OnClickListener(){
 
@@ -80,8 +80,8 @@ public class DeleteOmadaFragment extends Fragment {
                 catch (NumberFormatException e){
                     System.out.println("Could not parse " + e);
                 }
-                List<Omada_Class_Local> omades=MainActivity.sports_db_local.myDao().getOmades();
-                for (Omada_Class_Local i: omades){
+                List<Sports_Class_Local> sports=MainActivity.sports_db_local.myDao().getSports();
+                for (Sports_Class_Local i: sports){
                     int id =i.getId();
                     if(id == user_id){
                         flag=false;
@@ -96,9 +96,9 @@ public class DeleteOmadaFragment extends Fragment {
                     Toast.makeText(getActivity(), "Please insert the id!", Toast.LENGTH_SHORT).show();
                 }
                 else {
-                    Omada_Class_Local omada = new Omada_Class_Local();
-                    omada.setId(user_id);
-                    MainActivity.sports_db_local.myDao().deleteOmada(omada);
+                    Athlete_Class_Local athlete = new Athlete_Class_Local();
+                    athlete.setId(user_id);
+                    MainActivity.sports_db_local.myDao().deleteAthlete(athlete);
                     Toast.makeText(getActivity(), "delete successful!", Toast.LENGTH_LONG).show();
 
 

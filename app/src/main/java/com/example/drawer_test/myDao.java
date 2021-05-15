@@ -37,13 +37,21 @@ public interface myDao {
     @Query("Select * from Sports where Sport_id=:code")
     public Sports_Class_Local getSport(int code);
 
+    @Query("Select * from athletes where aid=:code")
+    public Athlete_Class_Local getAthlete(int code);
+
+    @Query("Select * from athletes inner join Sports on athletes.sportCode=Sports.Sport_id")
+    public List<Athlete_Class_Local> getAthletesSport();
+
+
     @Update
     public void updateOmada(Omada_Class_Local omada);
 
     @Insert
-    public void addOmada(Omada_Class_Local omada);
+    public void addTeam(Omada_Class_Local team);
 
-    @Query("Select * from Omades")
+
+    @Query("SELECT * from Omades")
     public List <Omada_Class_Local> getOmades();
 
     @Query("Select * from Omades where Oid=:code")

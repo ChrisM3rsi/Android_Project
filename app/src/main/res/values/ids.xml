@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <item name="my_edit_text_1" type="id"/>
+    <item name="my_edit_text_2" type="id"/>
+    <item name="my_edit_text_3" type="id"/>
+    <item name="my_edit_text_4" type="id"/>
+    <item name="my_edit_text_5" type="id"/>
+    <item name="my_edit_text_6" type="id"/>
+    <item name="my_edit_text_7" type="id"/>
+    <item name="my_edit_text_8" type="id"/>
+
+</resources>

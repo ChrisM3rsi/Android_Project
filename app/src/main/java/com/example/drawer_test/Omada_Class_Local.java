@@ -19,12 +19,8 @@ public class Omada_Class_Local {
     @ColumnInfo(name="Oid")
     private int id;
 
-    @ColumnInfo(name="nameGipedou")
-    private String onomaGipedou;
-
-    @ColumnInfo(name="nameOmadas")
-    private String onomaOmadas;
-
+    @ColumnInfo(name="name")
+    private String onoma;
 
     @ColumnInfo(name="gipedo")
     private String gipedo;
@@ -48,11 +44,8 @@ public class Omada_Class_Local {
         this.id = id;
     }
 
-    public void setOnomaGipedou(String onomaGipedou) {
-        this.onomaGipedou = onomaGipedou;
-    }
-    public void setOnomaOmadas(String onomaOmadas) {
-        this.onomaOmadas = onomaOmadas;
+    public void setOnoma(String onoma) {
+        this.onoma = onoma;
     }
 
     public void setGipedo(String gipedo) {
@@ -79,12 +72,8 @@ public class Omada_Class_Local {
         return id;
     }
 
-    public String getOnomaGipedou() {
-        return onomaGipedou;
-    }
-
-    public String getOnomaOmadas() {
-        return onomaOmadas;
+    public String getOnoma() {
+        return onoma;
     }
 
     public String getGipedo() {

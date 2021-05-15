@@ -106,7 +106,7 @@ public class Search_Queries extends Fragment {
                             String onoma = sport.getName();
                             String eidos = sport.getType();
                             String gender = sport.getGender();
-                            result = result + "id:" + code + " Name:" + onoma + " Type:" + eidos + " Gender:" + gender;
+                            result = result + "id: " + code + " Name: " + onoma + " Type: " + eidos + " Gender: " + gender;
 
                             queryResult.setText(result);
                             break;
@@ -115,7 +115,25 @@ public class Search_Queries extends Fragment {
                            String  message=e.getMessage();
                             Toast.makeText(getActivity(),message,Toast.LENGTH_LONG).show();
                         }
+                    case 1:
+                        try {
+                            Athlete_Class_Local athlete = MainActivity.sports_db_local.myDao().getAthlete(Integer.parseInt(id.getText().toString()));
+                            int code = athlete.getId();
+                            String onoma = athlete.getOnoma();
+                            String edra = athlete.getEdra();
+                            String epwnumo = athlete.getEpwnumo();
+                            int athlima=athlete.getSportId();
+                            String gennisi=athlete.getEtosGennisis();
+                            String xwra=athlete.getXwra();
+                            result =  result=result + "id: "+code + " Name: " + onoma +" Surname: " +epwnumo + " Home: "+edra + " Origin: "+xwra + " Born: "+gennisi+ " Sport_Id: "+athlima +"\n\n";
 
+                            queryResult.setText(result);
+                            break;
+                        }
+                        catch(Exception e){
+                            String  message=e.getMessage();
+                            Toast.makeText(getActivity(),message,Toast.LENGTH_LONG).show();
+                        }
                 }
             }
         });

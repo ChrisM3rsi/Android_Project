@@ -70,7 +70,7 @@ public class InsertOmadaFragment extends Fragment {
         onoma_gipedou= view.findViewById(R.id.onomaGipedou_ins_omadas);
         polh=view.findViewById(R.id.poli_ins_omadas);
         onoma_omadas=view.findViewById(R.id.onomaOmadas_ins_omadas);
-        xwra= view.findViewById(R.id.xwra_ins_athliti);
+        xwra= view.findViewById(R.id.xwra_ins_omadas);
         kwdikos_athlimatos=view.findViewById(R.id.kwdikosAthlimatos_ins_omadas);
         etos_idrisis=view.findViewById(R.id.etosIdrisis_ins_omadas);
         bt= (Button) view.findViewById(R.id.insertbt_omadas);
@@ -117,14 +117,14 @@ public class InsertOmadaFragment extends Fragment {
                     try {
                         Omada_Class_Local omada = new Omada_Class_Local();
                         omada.setId(user_kwdikos);
-                        omada.setOnomaGipedou(user_onoma_gipedou);
+                        omada.setGipedo(user_onoma_gipedou);
                         omada.setPolh(user_polh);
-                        omada.setOnomaOmadas(user_onoma_omadas);
+                        omada.setOnoma(user_onoma_omadas);
                         omada.setEtosIdrisis(user_etos_idrisis);
                         omada.setSportId(user_kwdikos_omadas);
                         omada.setXwra(user_xwra);
 
-                        MainActivity.sports_db_local.myDao().addOmada(omada);
+                        MainActivity.sports_db_local.myDao().addTeam(omada);
                         Toast.makeText(getActivity(), "insert successful!", Toast.LENGTH_LONG).show();
                     }
                     catch (Exception e){

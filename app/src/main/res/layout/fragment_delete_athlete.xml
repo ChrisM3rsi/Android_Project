@@ -24,8 +24,8 @@
 
     <EditText
         android:id="@+id/kwdikos_del_athliti"
-        android:layout_width="380dp"
-        android:layout_height="40dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
 
         android:layout_marginTop="24dp"
         android:hint="Κωδικός Αθλητή:"
@@ -35,9 +35,8 @@
 
     <Button
         android:id="@+id/deletebt_athliti"
-        android:layout_width="381dp"
-        android:layout_height="43dp"
-
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
         android:backgroundTint="@color/mple"
         android:text="DELETE"

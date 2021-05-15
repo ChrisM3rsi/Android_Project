@@ -6,7 +6,8 @@
         android:enabled="true">
         <item
             android:id="@+id/home"
-            android:title="Home">
+            android:title="Home"
+            >
             ></item>
 
 
@@ -22,20 +23,26 @@
                 android:id="@+id/insert_athlimatos"
                 android:title="Insert Athlimatos"
                 >
+
             </item>
+                 <item android:id="@+id/insert_omadas"
+                     android:title="Insert Omadas"
+
+                    ></item>
+
+                <item android:id="@+id/insert_agwna"
+                    android:title="Insert Agwna">
+
+                </item>
+
+
+
 
             <item
                 android:id="@+id/insert_athliti"
                 android:title="Insert Athliti"
                 >
             </item>
-             <item
-                 android:id="@+id/insert_omadas"
-                 android:title="Insert Omada"
-                 >
-
-             </item>
-
             </menu>
 
         </item>
@@ -48,14 +55,19 @@
                     android:title="Update Athlimatos">
 
                 </item>
+                <item android:id="@+id/update_agwna"
+                    android:title="Update Agwna">
+
+                </item>
+
                 <item android:id="@+id/update_athliti"
                         android:title="Update Athliti">
 
                 </item>
                 <item android:id="@+id/update_omadas"
-                    android:title="Update Omada">
+                    android:title="Update Omadas"
 
-                </item>
+                    ></item>
             </menu>
         </item>
 
@@ -68,12 +80,17 @@
                 android:title="Delete Athlimatos">
 
             </item>
-            <item android:id="@+id/delete_athliti"
-                android:title="Delete Athliti">
+            <item android:id="@+id/delete_omadas"
+                android:title="Delete Omadas"
+
+                ></item>
+            <item android:id="@+id/delete_agwna"
+                android:title="Delete Agwna">
 
             </item>
-            <item android:id="@+id/delete_omada"
-                android:title="Delete Omadas">
+
+            <item android:id="@+id/delete_athliti"
+                android:title="Delete Athliti">
 
             </item>
         </menu>
@@ -91,6 +108,7 @@
                 android:title="Anazitisi">
 
             </item>
+
         </menu>
         </item>
     </group>

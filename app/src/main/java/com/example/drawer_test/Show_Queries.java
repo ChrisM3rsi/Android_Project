@@ -102,7 +102,7 @@ public class Show_Queries extends Fragment {
                            String onoma=i.getName();
                            String eidos=i.getType();
                            String gender=i.getGender();
-                           result=result + "id:"+code + " Name:" + onoma +" Type:" +eidos + " Gender:"+gender +"\n\n";
+                           result=result + "id: "+code + " Name: " + onoma +" Type: " +eidos + " Gender: "+gender +"\n\n";
                        }
                        queryResult.setText(result);
                        break;
@@ -115,14 +115,29 @@ public class Show_Queries extends Fragment {
                            String  edra= i.getEdra();
                            String xwra= i.getXwra();
                            int athlima=i.getSportId();
-                           String gennnisi=i.getEtosGennisis();
+                           String gennisi=i.getEtosGennisis();
 
-                           result=result + "id:"+code + " Name:" + onoma +" Surname:" +epwnumo + " Home:"+edra + " Origin:"+xwra + " Born:"+gennnisi+ " Sport_Id:"+athlima +"\n\n";
+                           result=result + "id: "+code + " Name: " + onoma +" Surname: " +epwnumo + " Home: "+edra + " Origin: "+xwra + " Born: "+gennisi+ " Sport_Id: "+athlima +"\n\n";
                        }
                        queryResult.setText(result);
                        break;
 
 
+
+
+
+                   case 3:
+                       List<Athlete_Class_Local> athletesSport=MainActivity.sports_db_local.myDao().getAthletesSport();
+                       for(Athlete_Class_Local i: athletesSport){
+
+                           String sport=i.getSport().getName();
+                           String epwnumo=i.getEpwnumo();
+                           String onoma=i.getOnoma();
+                           result=result +"Onoma: "+onoma+" Epwnumo: "+epwnumo+" Athlima: "+sport +"\n\n";
+
+                       }
+                       queryResult.setText(result);
+                       break;
                }
            }
        });
