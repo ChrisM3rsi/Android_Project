@@ -64,9 +64,9 @@ public class DeleteAthleteFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        View view =inflater.inflate(R.layout.fragment_delete,container,false);
-        kwdikos=view.findViewById(R.id.kwdikos_del_athlima);
-        bt= (Button) view.findViewById(R.id.deletebt_athlima);
+        View view =inflater.inflate(R.layout.fragment_delete_athlete,container,false);
+        kwdikos=view.findViewById(R.id.kwdikos_del_athliti);
+        bt= (Button) view.findViewById(R.id.deletebt_athliti);
 
         bt.setOnClickListener(new View.OnClickListener(){
 
@@ -80,8 +80,8 @@ public class DeleteAthleteFragment extends Fragment {
                 catch (NumberFormatException e){
                     System.out.println("Could not parse " + e);
                 }
-                List<Sports_Class_Local> sports=MainActivity.sports_db_local.myDao().getSports();
-                for (Sports_Class_Local i: sports){
+                List<Athlete_Class_Local> athletes=MainActivity.sports_db_local.myDao().getAthletes();
+                for (Athlete_Class_Local i: athletes){
                     int id =i.getId();
                     if(id == user_id){
                         flag=false;

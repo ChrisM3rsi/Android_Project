@@ -18,7 +18,7 @@ import java.util.List;
  * Use the {@link InsertOmadaFragment#newInstance} factory method to
  * create an instance of this fragment.
  */
-public class InsertOmadaFragment extends Fragment {
+public class    InsertOmadaFragment extends Fragment {
     EditText kwdikos_omadas,onoma_gipedou,polh,onoma_omadas,xwra,kwdikos_athlimatos,etos_idrisis;
     Button bt;
     // TODO: Rename parameter arguments, choose names that match

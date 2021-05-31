@@ -28,7 +28,8 @@
         android:background="@color/mple"
         android:minHeight="?attr/actionBarSize"
         android:theme="?attr/actionBarTheme"
-        android:visibility="visible" />
+        android:visibility="visible"
+        />
 
 
     </FrameLayout>

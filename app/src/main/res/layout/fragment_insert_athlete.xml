@@ -24,8 +24,8 @@
 
     <EditText
         android:id="@+id/kwdikos_ins_athliti"
-        android:layout_width="380dp"
-        android:layout_height="40dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
 
         android:layout_marginTop="24dp"
         android:hint="Κωδικός Αθλητή:"
@@ -35,8 +35,8 @@
 
     <EditText
         android:id="@+id/onoma_ins_athliti"
-        android:layout_width="380dp"
-        android:layout_height="40dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
 
         android:layout_marginTop="24dp"
         android:hint="Όνομα Αθλητή:"
@@ -46,12 +46,12 @@
 
     <EditText
         android:id="@+id/eponumo_ins_athliti"
-        android:layout_width="380dp"
-        android:layout_height="40dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
 
-        android:layout_marginStart="16dp"
+
         android:layout_marginTop="24dp"
-        android:layout_marginEnd="16dp"
+
         android:hint="Επώνυμο Αθλητή:"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -59,12 +59,12 @@
 
     <EditText
         android:id="@+id/edra_ins_athliti"
-        android:layout_width="380dp"
-        android:layout_height="40dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
 
-        android:layout_marginStart="16dp"
+
         android:layout_marginTop="24dp"
-        android:layout_marginEnd="16dp"
+
         android:hint="Εδρα:"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -72,12 +72,12 @@
 
     <EditText
         android:id="@+id/xwra_ins_athliti"
-        android:layout_width="380dp"
-        android:layout_height="40dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
 
-        android:layout_marginStart="16dp"
+
         android:layout_marginTop="24dp"
-        android:layout_marginEnd="16dp"
+
         android:hint="Χώρα:"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -85,8 +85,8 @@
 
     <EditText
         android:id="@+id/kwdikos_Athlimatos_ins_athliti"
-        android:layout_width="380dp"
-        android:layout_height="40dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
 
         android:layout_marginTop="24dp"
         android:hint="Κωδικός Αθλήματος:"
@@ -96,12 +96,12 @@
 
     <EditText
         android:id="@+id/gennisi_ins_athliti"
-        android:layout_width="380dp"
-        android:layout_height="40dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
 
-        android:layout_marginStart="16dp"
+
         android:layout_marginTop="24dp"
-        android:layout_marginEnd="16dp"
+
         android:hint="Έτος Γέννησης:"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -109,8 +109,8 @@
 
     <Button
         android:id="@+id/insertbt_athliti"
-        android:layout_width="381dp"
-        android:layout_height="43dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
 
         android:layout_marginTop="16dp"
         android:backgroundTint="@color/mple"

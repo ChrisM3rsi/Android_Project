@@ -12,6 +12,15 @@ import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.Spinner;
 import android.widget.TextView;
+import android.widget.Toast;
+
+import com.google.android.gms.tasks.OnSuccessListener;
+import com.google.firebase.firestore.CollectionReference;
+import com.google.firebase.firestore.QueryDocumentSnapshot;
+import com.google.firebase.firestore.QuerySnapshot;
+import com.google.type.DateTime;
+
+import org.joda.time.DateTimeComparator;
 
 import java.util.List;
 
@@ -23,7 +32,7 @@ import java.util.List;
 public class Show_Queries extends Fragment {
     Spinner spinner;
     ArrayAdapter<CharSequence> adapter;
-    TextView queryView,queryResult;
+    TextView queryResult;
     Button btn;
     int test;
     // TODO: Rename parameter arguments, choose names that match
@@ -93,7 +102,7 @@ public class Show_Queries extends Fragment {
        btn.setOnClickListener(new View.OnClickListener() {
            @Override
            public void onClick(View v) {
-               String result="";
+               final String[] result = {""};
                switch (test){
                    case 0:
                        List<Sports_Class_Local> sports=MainActivity.sports_db_local.myDao().getSports();
@@ -102,9 +111,9 @@ public class Show_Queries extends Fragment {
                            String onoma=i.getName();
                            String eidos=i.getType();
                            String gender=i.getGender();
-                           result=result + "id: "+code + " Name: " + onoma +" Type: " +eidos + " Gender: "+gender +"\n\n";
+                           result[0] = result[0] + "id: "+code + " Name: " + onoma +" Type: " +eidos + " Gender: "+gender +"\n\n";
                        }
-                       queryResult.setText(result);
+                       queryResult.setText(result[0]);
                        break;
                    case 1:
                        List<Athlete_Class_Local> athletes=MainActivity.sports_db_local.myDao().getAthletes();
@@ -117,13 +126,27 @@ public class Show_Queries extends Fragment {
                            int athlima=i.getSportId();
                            String gennisi=i.getEtosGennisis();
 
-                           result=result + "id: "+code + " Name: " + onoma +" Surname: " +epwnumo + " Home: "+edra + " Origin: "+xwra + " Born: "+gennisi+ " Sport_Id: "+athlima +"\n\n";
+                           result[0] = result[0] + "id: "+code + " Name: " + onoma +" Surname: " +epwnumo + " Home: "+edra + " Origin: "+xwra + " Born: "+gennisi+ " Sport_Id: "+athlima +"\n\n";
                        }
-                       queryResult.setText(result);
+                       queryResult.setText(result[0]);
                        break;
 
 
+                   case 2:
+                       List<Omada_Class_Local> omades=MainActivity.sports_db_local.myDao().getOmades();
+                       for(Omada_Class_Local i: omades){
+                           int code=i.getId();
+                           String onoma=i.getOnoma();
+                           String gipedo=i.getGipedo();
+                           String  etos= i.getEtosIdrisis();
+                           String xwra= i.getXwra();
+                           int athlima=i.getSportId();
+                           String poli=i.getPolh();
 
+                           result[0] = result[0] + "id: "+code + " Name: " + onoma +" Stadium: " +gipedo + " Created: "+etos + " Origin: "+xwra + " City: "+poli+ " Sport_Id: "+athlima +"\n\n";
+                       }
+                       queryResult.setText(result[0]);
+                       break;
 
 
                    case 3:
@@ -133,11 +156,121 @@ public class Show_Queries extends Fragment {
                            String sport=i.getSport().getName();
                            String epwnumo=i.getEpwnumo();
                            String onoma=i.getOnoma();
-                           result=result +"Onoma: "+onoma+" Epwnumo: "+epwnumo+" Athlima: "+sport +"\n\n";
+                           result[0] = result[0] +"Onoma: "+onoma+" Epwnumo: "+epwnumo+" Athlima: "+sport +"\n\n";
 
                        }
-                       queryResult.setText(result);
+                       queryResult.setText(result[0]);
                        break;
+
+                   case 4:
+                       CollectionReference collectionReference=MainActivity.remote_db.collection("Atomikoi_Agwnes");
+                       collectionReference.get().addOnSuccessListener(new OnSuccessListener<QuerySnapshot>() {
+                           @Override
+                           public void onSuccess(QuerySnapshot queryDocumentSnapshots) {
+                               try {
+                                   int minYear = 3000;
+                                   int minMonth = 13;
+                                   int minDays = 32;
+                                   String poli = null;
+                                   String xwra = null;
+                                   String athlima = null;
+                                   String minHmeromhnia = "test";
+                                   for (QueryDocumentSnapshot documentSnapshot : queryDocumentSnapshots) {
+                                       Agwnes_Remote agwnes = documentSnapshot.toObject(Agwnes_Remote.class);
+                                       String hmeromhnia = agwnes.getHmeromhnia();
+
+                                       String[] test = hmeromhnia.split("/");
+                                       if (Integer.parseInt(test[2]) < minYear) {
+                                            minYear = Integer.parseInt(test[2]);
+                                           minHmeromhnia = hmeromhnia;
+                                           poli = agwnes.getPoli();
+                                           xwra = agwnes.getXwra();
+                                           athlima = agwnes.getAthlima();
+                                       } else {
+
+                                           if (Integer.parseInt(test[1]) < minMonth && Integer.parseInt(test[2]) < minYear) {
+                                               minMonth = Integer.parseInt(test[1]);
+                                               minHmeromhnia = hmeromhnia;
+                                               poli = agwnes.getPoli();
+                                               xwra = agwnes.getXwra();
+                                               athlima = agwnes.getAthlima();
+                                           } else {
+                                               if (Integer.parseInt(test[0]) < minDays && Integer.parseInt(test[2]) < minYear && Integer.parseInt(test[1]) < minMonth) {
+                                                   minDays = Integer.parseInt(test[0]);
+                                                   minHmeromhnia = hmeromhnia;
+                                                   poli = agwnes.getPoli();
+                                                   xwra = agwnes.getXwra();
+                                                   athlima = agwnes.getAthlima();
+                                               }
+                                           }
+                                       }
+
+                                   }
+                                   result[0] = result[0] + "Ημερομηνία: " + minHmeromhnia + " Πόλη: " + poli + " " +
+                                           "Χώρα : " + xwra + " Άθλημα: " + athlima;
+                                   queryResult.setText(result[0]);
+                               }
+                               catch(Exception e){
+                                   String message=e.getMessage();
+                                   Toast.makeText(getActivity(),message,Toast.LENGTH_LONG).show();
+                               }
+                           }
+                       });
+                       break;
+                   case 5:
+                       collectionReference=MainActivity.remote_db.collection("Omadikoi_Agwnes");
+                       collectionReference.get().addOnSuccessListener(new OnSuccessListener<QuerySnapshot>() {
+                           @Override
+                           public void onSuccess(QuerySnapshot queryDocumentSnapshots) {
+                               try {
+                                   int minYear = 3000;
+                                   int minMonth = 13;
+                                   int minDays = 32;
+                                   String poli = null;
+                                   String xwra = null;
+                                   String athlima = null;
+                                   String minHmeromhnia = "test";
+                                   for (QueryDocumentSnapshot documentSnapshot : queryDocumentSnapshots) {
+                                       Agwnes_Remote agwnes = documentSnapshot.toObject(Agwnes_Remote.class);
+                                       String hmeromhnia = agwnes.getHmeromhnia();
+
+                                       String[] test = hmeromhnia.split("/");
+                                       if (Integer.parseInt(test[2]) < minYear) {
+                                           minYear = Integer.parseInt(test[2]);
+                                           minHmeromhnia = hmeromhnia;
+                                           poli = agwnes.getPoli();
+                                           xwra = agwnes.getXwra();
+                                           athlima = agwnes.getAthlima();
+                                       } else {
+
+                                           if (Integer.parseInt(test[1]) < minMonth && Integer.parseInt(test[2]) < minYear) {
+                                               minMonth = Integer.parseInt(test[1]);
+                                               minHmeromhnia = hmeromhnia;
+                                               poli = agwnes.getPoli();
+                                               xwra = agwnes.getXwra();
+                                               athlima = agwnes.getAthlima();
+                                           } else {
+                                               if (Integer.parseInt(test[0]) < minDays && Integer.parseInt(test[2]) < minYear && Integer.parseInt(test[1]) < minMonth) {
+                                                   minDays = Integer.parseInt(test[0]);
+                                                   minHmeromhnia = hmeromhnia;
+                                                   poli = agwnes.getPoli();
+                                                   xwra = agwnes.getXwra();
+                                                   athlima = agwnes.getAthlima();
+                                               }
+                                           }
+                                       }
+
+                                   }
+                                   result[0] = result[0] + "Ημερομηνία: " + minHmeromhnia + " Πόλη: " + poli + " " +
+                                           "Χώρα : " + xwra + " Άθλημα: " + athlima;
+                                   queryResult.setText(result[0]);
+                               }
+                               catch(Exception e){
+                                   String message=e.getMessage();
+                                   Toast.makeText(getActivity(),message,Toast.LENGTH_LONG).show();
+                               }
+                           }
+                       });
                }
            }
        });

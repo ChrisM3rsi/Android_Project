@@ -2,6 +2,7 @@ package com.example.drawer_test;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.Toolbar;
 import androidx.drawerlayout.widget.DrawerLayout;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentTransaction;
@@ -33,11 +34,15 @@ public class MainActivity extends AppCompatActivity {
         drawerLayout=findViewById(R.id.drawer_layout);
         navigationView=findViewById(R.id.navigationView);
 
+
+
         //Creating dynamically welcome container so we can replace it afterwards
         Welcome welcome= new Welcome();
         getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,welcome).addToBackStack(null).commit();
         //ConstraintLayout layout =(ConstraintLayout) findViewById(R.id.welcome);
         //layout.setBackgroundColor(Color.parseColor("#3A9EC5"));
+
+
 
 
         //Fragment fragment=fragmentManager.findFragmentById(R.id.);
@@ -119,6 +124,13 @@ public class MainActivity extends AppCompatActivity {
                         drawerLayout.closeDrawers();
                         return true;
 
+                    case R.id.delete_agwna:
+                        item.setChecked(true);
+                        DeleteAgwnaFragment deleteAgwnaFragment=new DeleteAgwnaFragment();
+                        getSupportFragmentManager().beginTransaction().setCustomAnimations(R.anim.enter_left_to_right, R.anim.exit_left_to_right).replace(R.id.fragment_container,deleteAgwnaFragment).addToBackStack(null).commit();
+                        drawerLayout.closeDrawers();
+                        return true;
+
                     case R.id.update_athliti:
                         item.setChecked(true);
                         UpdateAthleteFragment updateAthleteFragment=new UpdateAthleteFragment();
@@ -163,20 +175,23 @@ public class MainActivity extends AppCompatActivity {
        // fragmentTransaction.add(R.id.fragment_welcome,)
         //fragmentTransaction.commit();
         //fragmentTransaction.replace(R.id.fragment_container, homeFragment);
-
+      
 
     public void  displayMessage(String message){
             Toast.makeText(this,message,Toast.LENGTH_LONG).show();
 
 
         }
+
     @Override
     public boolean onCreateOptionsMenu(Menu menu){
         MenuInflater menuInflater=getMenuInflater();
         menuInflater.inflate(R.menu.drawer_menu,menu);
-
         return true;
     }
+
+
+
 
 
 

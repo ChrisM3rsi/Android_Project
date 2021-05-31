@@ -34,8 +34,8 @@
 
     <EditText
         android:id="@+id/search_id"
-        android:layout_width="380dp"
-        android:layout_height="40dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
 
         android:layout_marginTop="8dp"
         android:hint="Κωδικός:"
@@ -45,8 +45,8 @@
 
     <Button
         android:id="@+id/run_queries_search"
-        android:layout_width="381dp"
-        android:layout_height="43dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
 
         android:layout_marginStart="16dp"
         android:layout_marginTop="8dp"

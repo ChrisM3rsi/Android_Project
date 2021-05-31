@@ -27,8 +27,8 @@
 
     <EditText
         android:id="@+id/kwdikos_up_athlima"
-        android:layout_width="380dp"
-        android:layout_height="40dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
 
         android:layout_marginTop="48dp"
         android:hint="Κωδικός Αθλήματος:"
@@ -38,8 +38,8 @@
 
     <EditText
         android:id="@+id/onoma_up_athlima"
-        android:layout_width="380dp"
-        android:layout_height="40dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
 
         android:layout_marginTop="24dp"
         android:hint="Όνομα Αθλήματος:"
@@ -49,8 +49,8 @@
 
     <EditText
         android:id="@+id/eidos_up_athlima"
-        android:layout_width="380dp"
-        android:layout_height="40dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
 
         android:layout_marginTop="24dp"
         android:hint="Είδος Αθλήματος (Ατομικό / Ομαδικό):"
@@ -60,8 +60,8 @@
 
     <EditText
         android:id="@+id/fullo_up_athlima"
-        android:layout_width="380dp"
-        android:layout_height="40dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
 
         android:layout_marginTop="24dp"
         android:hint="Φύλλο:"
@@ -72,8 +72,8 @@
 
     <Button
         android:id="@+id/updatebt_athlima"
-        android:layout_width="381dp"
-        android:layout_height="43dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
 
         android:layout_marginTop="16dp"
         android:backgroundTint="@color/mple"

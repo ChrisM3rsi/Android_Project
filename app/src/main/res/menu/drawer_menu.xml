@@ -1,12 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
-<menu
-    xmlns:android="http://schemas.android.com/apk/res/android">
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
     <group
         android:checkableBehavior="single"
         android:enabled="true">
         <item
             android:id="@+id/home"
             android:title="Home"
+            android:icon="@mipmap/baseline_home_white_48"
+            app:showAsAction="ifRoom"
             >
             ></item>
 
@@ -16,33 +18,40 @@
             android:id="@+id/insert"
             android:title="INSERT"
 
+
             >
             <menu>
 
             <item
                 android:id="@+id/insert_athlimatos"
                 android:title="Insert Athlimatos"
+                android:icon="@mipmap/baseline_code_white_48"
+                app:showAsAction="ifRoom"
                 >
 
             </item>
-                 <item android:id="@+id/insert_omadas"
-                     android:title="Insert Omadas"
+                <item
+                    android:id="@+id/insert_athliti"
+                    android:title="Insert Athliti"
+                    android:icon="@mipmap/baseline_code_white_48"
+                    app:showAsAction="ifRoom"
+                    >
+
+                </item>
+                <item android:id="@+id/insert_omadas"
+                    android:title="Insert Omadas"
+                    android:icon="@mipmap/baseline_code_white_48"
+                    app:showAsAction="ifRoom"
 
                     ></item>
-
                 <item android:id="@+id/insert_agwna"
-                    android:title="Insert Agwna">
+                    android:title="Insert Agwna"
+                    android:icon="@mipmap/baseline_code_white_48"
+                    app:showAsAction="ifRoom">
 
                 </item>
 
-
-
-
-            <item
-                android:id="@+id/insert_athliti"
-                android:title="Insert Athliti"
-                >
-            </item>
+           
             </menu>
 
         </item>
@@ -52,22 +61,33 @@
             >
             <menu>
                 <item android:id="@+id/update_athlimatos"
-                    android:title="Update Athlimatos">
+                    android:title="Update Athlimatos"
+                    android:icon="@mipmap/baseline_code_white_48"
+                    app:showAsAction="ifRoom">
 
                 </item>
-                <item android:id="@+id/update_agwna"
-                    android:title="Update Agwna">
-
-                </item>
-
                 <item android:id="@+id/update_athliti"
-                        android:title="Update Athliti">
+                    android:title="Update Athliti"
+                    android:icon="@mipmap/baseline_code_white_48"
+                    app:showAsAction="ifRoom">
+                </item>
+                    <item android:id="@+id/update_omadas"
+                        android:title="Update Omadas"
+                        android:icon="@mipmap/baseline_code_white_48"
+                        app:showAsAction="ifRoom"
+
+                        ></item>
+
+                <item android:id="@+id/update_agwna"
+                    android:title="Update Agwna"
+                    android:icon="@mipmap/baseline_code_white_48"
+                    app:showAsAction="ifRoom">
 
                 </item>
-                <item android:id="@+id/update_omadas"
-                    android:title="Update Omadas"
 
-                    ></item>
+
+
+
             </menu>
         </item>
 
@@ -77,22 +97,32 @@
         android:title="DELETE">
         <menu>
             <item android:id="@+id/delete_athlimatos"
-                android:title="Delete Athlimatos">
-
-            </item>
-            <item android:id="@+id/delete_omadas"
-                android:title="Delete Omadas"
-
-                ></item>
-            <item android:id="@+id/delete_agwna"
-                android:title="Delete Agwna">
+                android:title="Delete Athlimatos"
+                android:icon="@mipmap/baseline_code_white_48"
+                app:showAsAction="ifRoom">
 
             </item>
 
             <item android:id="@+id/delete_athliti"
-                android:title="Delete Athliti">
+                android:title="Delete Athliti"
+                android:icon="@mipmap/baseline_code_white_48"
+                app:showAsAction="ifRoom">
 
             </item>
+            <item android:id="@+id/delete_omadas"
+                android:title="Delete Omadas"
+                android:icon="@mipmap/baseline_code_white_48"
+                app:showAsAction="ifRoom"
+
+                ></item>n
+            <item android:id="@+id/delete_agwna"
+                android:title="Delete Agwna"
+                android:icon="@mipmap/baseline_code_white_48"
+                app:showAsAction="ifRoom">
+
+            </item>
+
+
         </menu>
 
     </item>
@@ -101,11 +131,17 @@
             android:title="QUERIES">
         <menu>
             <item android:id="@+id/emfanisi"
-                android:title="Emfanisi">
+                android:title="Emfanisi"
+                android:icon="@mipmap/baseline_dehaze_white_48"
+                app:showAsAction="ifRoom"
+                >
 
             </item>
             <item android:id="@+id/anazitisi"
-                android:title="Anazitisi">
+                android:title="Anazitisi"
+                android:icon="@mipmap/baseline_search_white_48"
+                app:showAsAction="ifRoom"
+                >
 
             </item>
 
